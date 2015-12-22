@@ -1,7 +1,7 @@
 #pragma once
 
 #include "component.h"
-#include "actor.h"
+#include "ctransform.h"
 
 #include "../Physics/rigidbody.h"
 

@@ -1,4 +1,7 @@
 #include "actor.h"
+#include "component.h"
+#include "ctransform.h"
+#include "crigidbody.h"
 
 namespace engine { namespace component {
 
@@ -8,7 +11,7 @@ namespace engine { namespace component {
 	}
 
 	Actor::~Actor() {
-		for (int i = 0; i < m_components.size(); i++) {
+		for (unsigned int i = 0; i < m_components.size(); i++) {
 			delete m_components[i];
 		}
 		delete	m_transform;
@@ -24,13 +27,13 @@ namespace engine { namespace component {
 	}
 
 	void Actor::Start() {
-		for (int i = 0; i < m_components.size(); i++) {
+		for (unsigned int i = 0; i < m_components.size(); i++) {
 			m_components[i]->Start();
 		}
 	}
 
 	void Actor::Update(float deltaTime) {
-		for (int i = 0; i < m_components.size(); i++) {
+		for (unsigned int i = 0; i < m_components.size(); i++) {
 			m_components[i]->Update(deltaTime);
 		}
 	}

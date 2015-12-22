@@ -1,8 +1,8 @@
 #pragma once
 
-namespace engine {	namespace component {
+#include "actor.h"
 
-	class Actor;
+namespace engine {	namespace component {
 
 	class Component {
 	protected:

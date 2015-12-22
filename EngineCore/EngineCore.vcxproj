@@ -284,6 +284,7 @@
     <Font Include="arial.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="test.jpg" />
     <Image Include="test2.jpg" />
   </ItemGroup>
   <ItemGroup>

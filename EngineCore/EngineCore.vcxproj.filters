@@ -512,5 +512,8 @@
     <Image Include="test2.jpg">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="test.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

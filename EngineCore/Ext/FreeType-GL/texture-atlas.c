@@ -130,7 +130,7 @@ texture_atlas_set_region( texture_atlas_t * self,
 			dst = self->data + ((y + i)*self->width + x) * charsize * depth;
 			src = data + (i*stride) * charsize;
 
-			for (int j = 0; j < width; j++) {
+			for (unsigned int j = 0; j < width; j++) {
 				dst[j * 2 + 0] = 0xff;
 				dst[j * 2 + 1] = src[j];
 			}

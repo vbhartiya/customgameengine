@@ -1,10 +1,12 @@
 #pragma once
 
 #include <vector>
-#include "ctransform.h"
-#include "crigidbody.h"
 
 namespace engine {	namespace component {
+
+	class Component;
+	class CTransform;
+	class CRigidBody;
 
 	class Actor {
 	private:
