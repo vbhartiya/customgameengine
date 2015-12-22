@@ -1,0 +1,59 @@
+﻿Build started 22/12/2015 2:48:34 PM.
+     1>Project "C:\Users\Vishesh\documents\visual studio 2015\Projects\Engine\EngineCore\EngineCore.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl- /Od /Oy- /D WIN32 /D _LIB /D FT2_BUILD_LIBRARY /D GLEW_STATIC /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D ENABLE_OPENAL /D _MBCS /Gm /EHsc /RTCu /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"C:\Users\Vishesh\documents\visual studio 2015\Projects\Engine\bin\Debug\Intermediate\\" /Fd"C:\Users\Vishesh\documents\visual studio 2015\Projects\Engine\bin\Debug\Intermediate\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Examples\game.cpp Examples\tilelayer.cpp Source\Components\Actor.cpp Source\Audio\sound.cpp Source\Audio\audiomanager.cpp Source\Components\csprite.cpp Source\Components\ctransform.cpp Source\Components\crigidbody.cpp Source\Graphics\batchrenderer2D.cpp Source\Graphics\Buffers\indexbuffer.cpp main.cpp Source\Graphics\Buffers\buffer.cpp Source\Graphics\Buffers\vertexarray.cpp Source\Graphics\Font.cpp Source\Graphics\fontmanager.cpp Source\Graphics\label.cpp Source\Graphics\Layers\group.cpp Source\Graphics\Layers\layer.cpp Source\Graphics\shader.cpp Source\Graphics\sprite.cpp Source\Graphics\texture.cpp Source\Graphics\window.cpp Source\Maths\mat4.cpp Source\Maths\Vec2.cpp Source\Maths\Vec3.cpp Source\Maths\Vec4.cpp Source\Physics\collider.cpp Source\Physics\rigidbody.cpp
+         rigidbody.cpp
+         collider.cpp
+         Vec4.cpp
+         Vec3.cpp
+         Vec2.cpp
+         mat4.cpp
+         window.cpp
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\graphics\window.cpp(120): warning C4244: 'argument': conversion from 'const double' to 'const float', possible loss of data
+         texture.cpp
+         sprite.cpp
+         shader.cpp
+         layer.cpp
+         group.cpp
+         label.cpp
+         fontmanager.cpp
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\graphics\fontmanager.cpp(30): warning C4018: '<': signed/unsigned mismatch
+         Font.cpp
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\graphics\font.cpp(9): warning C4244: 'argument': conversion from 'unsigned int' to 'const float', possible loss of data
+         vertexarray.cpp
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\graphics\buffers\vertexarray.cpp(10): warning C4018: '<': signed/unsigned mismatch
+         buffer.cpp
+         main.cpp
+         indexbuffer.cpp
+         batchrenderer2D.cpp
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\graphics\batchrenderer2d.cpp(68): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\graphics\batchrenderer2d.cpp(91): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\graphics\batchrenderer2d.cpp(163): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\graphics\batchrenderer2d.cpp(213): warning C4018: '<': signed/unsigned mismatch
+         Generating Code...
+         Compiling...
+         crigidbody.cpp
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\components\actor.h(12): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\components\actor.h(12): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\components\actor.h(12): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\components\actor.h(22): error C2143: syntax error: missing ';' before '*'
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\components\actor.h(22): error C2433: 'engine::component::Actor::CRigidBody': 'inline' not permitted on data declarations
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\components\actor.h(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\components\actor.h(22): error C2334: unexpected token(s) preceding '{'; skipping apparent function body
+         ctransform.cpp
+         csprite.cpp
+         audiomanager.cpp
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\audio\audiomanager.cpp(23): warning C4018: '<': signed/unsigned mismatch
+         sound.cpp
+         Actor.cpp
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\components\actor.cpp(11): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\components\actor.cpp(27): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\vishesh\documents\visual studio 2015\projects\engine\enginecore\source\components\actor.cpp(33): warning C4018: '<': signed/unsigned mismatch
+         tilelayer.cpp
+         game.cpp
+         Generating Code...
+     1>Done Building Project "C:\Users\Vishesh\documents\visual studio 2015\Projects\Engine\EngineCore\EngineCore.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:20.86

@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A2538F15-0144-4EDC-A85F-F84B75458370}</ProjectGuid>
+    <RootNamespace>EngineCore</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(ProjectDir)Ext\GorillaAudio\include;$(ProjectDir)Ext\libvorbis\include;$(ProjectDir)Ext\libogg\include;$(ProjectDir)Ext\OpenAL\include;$(ProjectDir)Ext\FreeType-GL;$(ProjectDir)Ext\FreeType\include;$(SolutionDir)Dependencies\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\Release;$(ProjectDir)\Ext\OpenAL\libs\Win32;$(SolutionDir)\Dependencies\lib\GLEW;$(SolutionDir)\Dependencies\lib\FreeImage;$(SolutionDir)\Dependencies\lib\GLFW;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\$(Configuration)\Intermediate\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\$(Configuration)\Intermediate\</IntDir>
+    <IncludePath>$(ProjectDir)Ext\GorillaAudio\src;$(ProjectDir)Ext\OpenAL\include;$(ProjectDir)Ext\libvorbis\include;$(ProjectDir)Ext\libogg\include;$(ProjectDir)Ext\FreeType-GL;$(ProjectDir)Ext\FreeType\include;$(SolutionDir)Dependencies\include;$(VC_IncludePath);$(WindowsSDK_IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Release;$(ProjectDir)Ext\OpenAL\libs\Win32;$(SolutionDir)Dependencies\lib\GLEW;$(SolutionDir)Dependencies\lib\FreeImage;$(SolutionDir)Dependencies\lib\GLFW;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);$(NETFXKitsDir)Lib\um\x86</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_LIB;FT2_BUILD_LIBRARY;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;ENABLE_OPENAL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>UninitializedLocalUsageCheck</BasicRuntimeChecks>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>LibVorbis.lib;LibOgg.lib;OpenAL32.lib;freeimage.lib;glfw3.lib;opengl32.lib;glew32s.lib;kernel32.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_LIB;FT2_BUILD_LIBRARY;GLEW_STATIC;_CRT_SECURE_NO_WARNINGS;_CRT_NONSTDC_NO_DEPRECATE;ENABLE_OPENAL;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>LibVorbis.lib;LibOgg.lib;freeimage.lib;glfw3.lib;opengl32.lib;glew32s.lib;kernel32.lib;user32.lib;OpenAL32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Examples\game.cpp" />
+    <ClCompile Include="Examples\tilelayer.cpp" />
+    <ClCompile Include="Ext\FreeType-GL\platform.c" />
+    <ClCompile Include="Ext\FreeType-GL\texture-atlas.c" />
+    <ClCompile Include="Ext\FreeType-GL\texture-font.c" />
+    <ClCompile Include="Ext\FreeType-GL\vector.c" />
+    <ClCompile Include="Ext\FreeType\src\autofit\autofit.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftbase.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftbbox.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftbitmap.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftdebug.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftfntfmt.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftfstype.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftgasp.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftglyph.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftgxval.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftinit.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftlcdfil.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftmm.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftotval.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftpatent.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftpfr.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftstroke.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftsynth.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftsystem.c" />
+    <ClCompile Include="Ext\FreeType\src\base\fttype1.c" />
+    <ClCompile Include="Ext\FreeType\src\base\ftwinfnt.c" />
+    <ClCompile Include="Ext\FreeType\src\bdf\bdf.c" />
+    <ClCompile Include="Ext\FreeType\src\cache\ftcache.c" />
+    <ClCompile Include="Ext\FreeType\src\cff\cff.c" />
+    <ClCompile Include="Ext\FreeType\src\cid\type1cid.c" />
+    <ClCompile Include="Ext\FreeType\src\gzip\ftgzip.c" />
+    <ClCompile Include="Ext\FreeType\src\lzw\ftlzw.c" />
+    <ClCompile Include="Ext\FreeType\src\pcf\pcf.c" />
+    <ClCompile Include="Ext\FreeType\src\pfr\pfr.c" />
+    <ClCompile Include="Ext\FreeType\src\psaux\psaux.c" />
+    <ClCompile Include="Ext\FreeType\src\pshinter\pshinter.c" />
+    <ClCompile Include="Ext\FreeType\src\psnames\psmodule.c" />
+    <ClCompile Include="Ext\FreeType\src\raster\raster.c" />
+    <ClCompile Include="Ext\FreeType\src\sfnt\sfnt.c" />
+    <ClCompile Include="Ext\FreeType\src\smooth\smooth.c" />
+    <ClCompile Include="Ext\FreeType\src\truetype\truetype.c" />
+    <ClCompile Include="Ext\FreeType\src\type1\type1.c" />
+    <ClCompile Include="Ext\FreeType\src\type42\type42.c" />
+    <ClCompile Include="Ext\FreeType\src\winfonts\winfnt.c" />
+    <ClCompile Include="Ext\GorillaAudio\src\common\gc_common.c" />
+    <ClCompile Include="Ext\GorillaAudio\src\common\gc_thread.c" />
+    <ClCompile Include="Ext\GorillaAudio\src\devices\ga_openal.c" />
+    <ClCompile Include="Ext\GorillaAudio\src\ga.c" />
+    <ClCompile Include="Ext\GorillaAudio\src\gau.c" />
+    <ClCompile Include="Ext\GorillaAudio\src\ga_stream.c" />
+    <ClCompile Include="Source\Components\Actor.cpp" />
+    <ClCompile Include="Source\Audio\sound.cpp" />
+    <ClCompile Include="Source\Audio\audiomanager.cpp" />
+    <ClCompile Include="Source\Components\csprite.cpp" />
+    <ClCompile Include="Source\Components\ctransform.cpp" />
+    <ClCompile Include="Source\Components\crigidbody.cpp" />
+    <ClCompile Include="Source\Graphics\batchrenderer2D.cpp" />
+    <ClCompile Include="Source\Graphics\Buffers\indexbuffer.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Source\Graphics\Buffers\buffer.cpp" />
+    <ClCompile Include="Source\Graphics\Buffers\vertexarray.cpp" />
+    <ClCompile Include="Source\Graphics\Font.cpp" />
+    <ClCompile Include="Source\Graphics\fontmanager.cpp" />
+    <ClCompile Include="Source\Graphics\label.cpp" />
+    <ClCompile Include="Source\Graphics\Layers\group.cpp" />
+    <ClCompile Include="Source\Graphics\Layers\layer.cpp" />
+    <ClCompile Include="Source\Graphics\shader.cpp" />
+    <ClCompile Include="Source\Graphics\sprite.cpp" />
+    <ClCompile Include="Source\Graphics\texture.cpp" />
+    <ClCompile Include="Source\Graphics\window.cpp" />
+    <ClCompile Include="Source\Maths\mat4.cpp" />
+    <ClCompile Include="Source\Maths\Vec2.cpp" />
+    <ClCompile Include="Source\Maths\Vec3.cpp" />
+    <ClCompile Include="Source\Maths\Vec4.cpp" />
+    <ClCompile Include="Source\Physics\collider.cpp" />
+    <ClCompile Include="Source\Physics\rigidbody.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Examples\tilelayer.h" />
+    <ClInclude Include="Ext\FreeType-GL\freetype-gl.h" />
+    <ClInclude Include="Ext\FreeType-GL\opengl.h" />
+    <ClInclude Include="Ext\FreeType-GL\platform.h" />
+    <ClInclude Include="Ext\FreeType-GL\texture-atlas.h" />
+    <ClInclude Include="Ext\FreeType-GL\texture-font.h" />
+    <ClInclude Include="Ext\FreeType-GL\vec234.h" />
+    <ClInclude Include="Ext\FreeType-GL\vector.h" />
+    <ClInclude Include="Ext\FreeType\include\freetype\config\ftconfig.h" />
+    <ClInclude Include="Ext\FreeType\include\freetype\config\ftheader.h" />
+    <ClInclude Include="Ext\FreeType\include\freetype\config\ftmodule.h" />
+    <ClInclude Include="Ext\FreeType\include\freetype\config\ftoption.h" />
+    <ClInclude Include="Ext\FreeType\include\freetype\config\ftstdlib.h" />
+    <ClInclude Include="Ext\FreeType\include\ft2build.h" />
+    <ClInclude Include="Ext\GorillaAudio\include\gorilla\common\gc_common.h" />
+    <ClInclude Include="Ext\GorillaAudio\include\gorilla\common\gc_thread.h" />
+    <ClInclude Include="Ext\GorillaAudio\include\gorilla\common\gc_types.h" />
+    <ClInclude Include="Ext\GorillaAudio\include\gorilla\devices\ga_openal.h" />
+    <ClInclude Include="Ext\GorillaAudio\include\gorilla\ga.h" />
+    <ClInclude Include="Ext\GorillaAudio\include\gorilla\gau.h" />
+    <ClInclude Include="Ext\GorillaAudio\include\gorilla\ga_internal.h" />
+    <ClInclude Include="Source\Components\actor.h" />
+    <ClInclude Include="Source\Components\component.h" />
+    <ClInclude Include="Source\Audio\sound.h" />
+    <ClInclude Include="Source\Audio\audiomanager.h" />
+    <ClInclude Include="Source\Components\crigidbody.h" />
+    <ClInclude Include="Source\Components\csprite.h" />
+    <ClInclude Include="Source\Components\ctransform.h" />
+    <ClInclude Include="Source\engine.h" />
+    <ClInclude Include="Source\Graphics\batchrenderer2D.h" />
+    <ClInclude Include="Source\Graphics\Buffers\indexbuffer.h" />
+    <ClInclude Include="Source\Graphics\Buffers\buffer.h" />
+    <ClInclude Include="Source\Graphics\Buffers\vertexarray.h" />
+    <ClInclude Include="Source\Graphics\Font.h" />
+    <ClInclude Include="Source\Graphics\fontmanager.h" />
+    <ClInclude Include="Source\Graphics\label.h" />
+    <ClInclude Include="Source\Graphics\Layers\group.h" />
+    <ClInclude Include="Source\Graphics\Layers\layer.h" />
+    <ClInclude Include="Source\Graphics\renderable2D.h" />
+    <ClInclude Include="Source\Graphics\renderer2D.h" />
+    <ClInclude Include="Source\Graphics\shader.h" />
+    <ClInclude Include="Source\Graphics\sprite.h" />
+    <ClInclude Include="Source\Graphics\texture.h" />
+    <ClInclude Include="Source\Graphics\window.h" />
+    <ClInclude Include="Source\Maths\mat4.h" />
+    <ClInclude Include="Source\Maths\Maths.h" />
+    <ClInclude Include="Source\Maths\Vec2.h" />
+    <ClInclude Include="Source\Maths\Vec3.h" />
+    <ClInclude Include="Source\Maths\Vec4.h" />
+    <ClInclude Include="Source\Physics\collider.h" />
+    <ClInclude Include="Source\Physics\rigidbody.h" />
+    <ClInclude Include="Source\Utility\fileutil.h" />
+    <ClInclude Include="Source\Utility\imageutil.h" />
+    <ClInclude Include="Source\Utility\stringutils.h" />
+    <ClInclude Include="Source\Utility\timer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Misc\Process.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Shaders\basic.frag" />
+    <None Include="Source\Shaders\basic.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="arial.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="test2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Examples\Triumph.wav" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

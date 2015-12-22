@@ -1,0 +1,35 @@
+﻿Build started 15/12/2015 3:29:04 PM.
+     1>Project "C:\Users\Vishesh\Documents\Visual Studio 2015\Projects\Engine\LibVorbis\LibVorbis.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D _CRT_SECURE_NO_WARNINGS /D _USE_MATH_DEFINES /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Release\\" /Fd"Release\LibVorbis.pdb" /Gd /TC /analyze- /errorReport:prompt ..\EngineCore\Ext\libvorbis\lib\vorbisfile.c
+         vorbisfile.c
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"C:\Users\Vishesh\Documents\Visual Studio 2015\Projects\Engine\Release\LibVorbis.lib" /NOLOGO /LTCG Release\analysis.obj
+         Release\bitrate.obj
+         Release\block.obj
+         Release\codebook.obj
+         Release\envelope.obj
+         Release\floor0.obj
+         Release\floor1.obj
+         Release\info.obj
+         Release\lookup.obj
+         Release\lpc.obj
+         Release\lsp.obj
+         Release\mapping0.obj
+         Release\mdct.obj
+         Release\psy.obj
+         Release\registry.obj
+         Release\res0.obj
+         Release\sharedbook.obj
+         Release\smallft.obj
+         Release\synthesis.obj
+         Release\tone.obj
+         Release\vorbisenc.obj
+         Release\vorbisfile.obj
+         Release\window.obj
+         LibVorbis.vcxproj -> C:\Users\Vishesh\Documents\Visual Studio 2015\Projects\Engine\Release\LibVorbis.lib
+     1>Done Building Project "C:\Users\Vishesh\Documents\Visual Studio 2015\Projects\Engine\LibVorbis\LibVorbis.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.18

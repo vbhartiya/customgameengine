@@ -1,0 +1,19 @@
+01) Create a Window class using GLFW
+02) Link to GLEW
+03) Add input, also using GLFW
+04) Add Vec2, Vec3 and Vec4 classes
+05) Add Mat4 class (which includes Projection and Tranformation matrices)
+06) Create a Shader class that handles the loading and compiling of Shader files
+07) Create classes for Buffers, Index Buffers and Vertex Array to wrap OpenGL data
+08) Define a Renderable type which encapsulates the properties (eg. position, size, color) of anything that will be rendered to the screen
+09) Define a Renderer base class which forms the basis of more specific renderers. Basic functionality includes a transformation stack, 
+	the ability to submit Renderables to be rendered, and the ability to flush the renderer to actually render the submitted Renderables.
+10) Use the Renderer base class to create a BatchRenderer that can render multiple Renderable objects with one draw call.
+11) Create a Layer class which can be used to render multiple Renderables using a common Projection matrix and Shader
+12) Create a Group class which can be used to apply the same transformation matrix on multiple Renderables, and to draw Renderables relative to
+	one another
+13) Use FreeImage to build a Texture class that loads an image from a file and into OpenGL
+14) Add support in the BatchRenderer to render arrays of texture (using textureIDs)
+15) Integrate FreeType and FreeType-GL to support font rendering
+16) Add support in Renderer (and hence BatchRenderer) to render fonts using FreeType-GL. Also add a new Renderable type called Label which can 
+	be used to submit and render text
