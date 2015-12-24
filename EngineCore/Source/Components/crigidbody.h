@@ -6,8 +6,9 @@
 #include "../Physics/rigidbody.h"
 
 namespace engine {	namespace component {
-
 	class CRigidBody : public Component {
+		friend class Actor;
+	private:
 		physics::RigidBody* m_rigidbody;
 	public:
 		CRigidBody(float mass);

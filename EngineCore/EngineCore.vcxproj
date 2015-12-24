@@ -192,6 +192,7 @@
     <ClCompile Include="Source\Components\Actor.cpp" />
     <ClCompile Include="Source\Audio\sound.cpp" />
     <ClCompile Include="Source\Audio\audiomanager.cpp" />
+    <ClCompile Include="Source\Components\ccollider.cpp" />
     <ClCompile Include="Source\Components\csprite.cpp" />
     <ClCompile Include="Source\Components\ctransform.cpp" />
     <ClCompile Include="Source\Components\crigidbody.cpp" />
@@ -240,6 +241,7 @@
     <ClInclude Include="Ext\GorillaAudio\include\gorilla\gau.h" />
     <ClInclude Include="Ext\GorillaAudio\include\gorilla\ga_internal.h" />
     <ClInclude Include="Source\Components\actor.h" />
+    <ClInclude Include="Source\Components\ccoliider.h" />
     <ClInclude Include="Source\Components\component.h" />
     <ClInclude Include="Source\Audio\sound.h" />
     <ClInclude Include="Source\Audio\audiomanager.h" />

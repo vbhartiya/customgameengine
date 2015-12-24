@@ -5,9 +5,8 @@ namespace engine {	namespace physics {
 	maths::Vec3 RigidBody::m_gravity(0, -9.8f, 0);
 
 	RigidBody::RigidBody(float mass, float inertia)	
-		: m_massData(mass, inertia)
+		: m_massData(mass, inertia), m_gravityScale(1)
 	{		
-		m_forceSum = m_gravity * m_gravityScale * m_massData.mass;
 	}
 
 	void RigidBody::AddForce(const maths::Vec3& force) {
@@ -15,9 +14,11 @@ namespace engine {	namespace physics {
 	}
 
 	void RigidBody::Update(float deltaTime) {
+		m_forceSum += m_gravity * m_gravityScale * m_massData.mass;
 		m_acceleration = m_forceSum * m_massData.invMass;
 		m_velocity += m_acceleration * deltaTime;
-		m_forceSum = m_gravity * m_gravityScale * m_massData.mass;
+
+		m_forceSum -= m_forceSum;
 	}
 
 }	}

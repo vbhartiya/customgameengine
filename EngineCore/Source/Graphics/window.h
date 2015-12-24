@@ -4,9 +4,10 @@
 #include <GLEW/glew.h>
 #include <GLFW/glfw3.h>
 
-#include "../Maths/Maths.h"
 #include "fontmanager.h"
+#include "../Maths/Maths.h"
 #include "../Audio/audiomanager.h"
+#include "../Physics/physicsmanager.h"
 
 #define MAX_KEYS	 1024
 #define MAX_BUTTONS  32

@@ -336,6 +336,9 @@
     <ClCompile Include="Source\Physics\physicsmanager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Components\ccollider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ext\FreeType\include\freetype\config\ftheader.h">
@@ -504,6 +507,9 @@
       <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="Source\Physics\physicsmanager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Components\ccoliider.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

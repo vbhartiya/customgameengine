@@ -33,6 +33,9 @@ namespace engine {	namespace physics {
 		Collider(const maths::Vec3& bottomLeft, const maths::Vec3& topRight);
 		Collider(const maths::Vec3& position, const float& radius);
 
+		void UpdatePosition(const maths::Vec3& position);
+		void UpdateSize(const maths::Vec2& size);
+
 		bool IsColliding(const Collider& other);
 	private:
 		bool AABBvsAABB(const Collider& other);

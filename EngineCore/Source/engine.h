@@ -15,6 +15,7 @@
 #include "Components/csprite.h"
 #include "Components/ctransform.h"
 #include "Components/crigidbody.h"
+#include "Components/ccoliider.h"
 
 namespace engine {
 	class Engine {

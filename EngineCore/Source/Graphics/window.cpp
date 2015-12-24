@@ -14,7 +14,9 @@ namespace engine {	namespace graphics {
 			glfwTerminate();
 
 		FontManager::Add(new Font("arial", "arial.ttf", 32));
+
 		audio::AudioManager::Init();
+		physics::PhysicsManager::Init();
 
 		for (int i = 0; i < MAX_KEYS; i++) {
 			m_keys[i] = false;
@@ -33,6 +35,7 @@ namespace engine {	namespace graphics {
 	Window::~Window() {
 		FontManager::Clean();
 		audio::AudioManager::Clean();
+		physics::PhysicsManager::Clean();
 
 		glfwTerminate();
 	}
@@ -131,6 +134,7 @@ namespace engine {	namespace graphics {
 		}
 		
 		audio::AudioManager::Update();
+		physics::PhysicsManager::Update();
 
 		glfwSwapBuffers(m_window);
 		glfwPollEvents();

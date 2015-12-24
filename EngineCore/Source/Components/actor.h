@@ -7,17 +7,20 @@ namespace engine {	namespace component {
 	class Component;
 	class CTransform;
 	class CRigidBody;
+	class CCollider;
 
 	class Actor {
 	private:
+		const char* m_name;
 		CTransform* m_transform;
 		CRigidBody* m_rigidbody;
 		std::vector< Component* > m_components;
 	public:
-		Actor();
+		Actor(const char* name);
 		~Actor();
 		void AddComponent(Component* component);
 		void AddComponent(CRigidBody* component);
+		void AddComponent(CCollider* component);
 		void Start();
 		void Update(float deltaTime);
 
