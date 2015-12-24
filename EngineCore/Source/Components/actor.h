@@ -17,6 +17,7 @@ namespace engine {	namespace component {
 		Actor();
 		~Actor();
 		void AddComponent(Component* component);
+		void AddComponent(CRigidBody* component);
 		void Start();
 		void Update(float deltaTime);
 

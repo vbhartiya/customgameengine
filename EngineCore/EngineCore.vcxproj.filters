@@ -88,6 +88,18 @@
     <Filter Include="Source Files\Example">
       <UniqueIdentifier>{fd3c6edd-3398-4892-8009-c0b9f090c154}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Physics">
+      <UniqueIdentifier>{26b4f7ff-6f2f-4049-936a-e9ee81578ad2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Components">
+      <UniqueIdentifier>{af66fcdc-6259-4489-a6bd-5c09a7b07013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Physics">
+      <UniqueIdentifier>{c16eb8a5-a7fe-4cde-9537-d9aa17f48b68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Components">
+      <UniqueIdentifier>{ed69e8f8-7a57-4e51-8336-72ae88c564ce}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -303,22 +315,25 @@
     <ClCompile Include="Examples\game.cpp">
       <Filter>Source Files\Example</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Components\Actor.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Components\ctransform.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Components\csprite.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Physics\rigidbody.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Components\crigidbody.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Physics</Filter>
     </ClCompile>
     <ClCompile Include="Source\Physics\collider.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\Actor.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\crigidbody.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\csprite.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\ctransform.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Physics\physicsmanager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -467,25 +482,28 @@
     <ClInclude Include="Examples\tilelayer.h">
       <Filter>Header Files\Example</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Components\actor.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Components\component.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Components\ctransform.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Components\csprite.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Source\Physics\collider.h">
+      <Filter>Header Files\Physics</Filter>
     </ClInclude>
     <ClInclude Include="Source\Physics\rigidbody.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Components\actor.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Components\component.h">
+      <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="Source\Components\crigidbody.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Components</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Physics\collider.h">
+    <ClInclude Include="Source\Components\csprite.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Components\ctransform.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Physics\physicsmanager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

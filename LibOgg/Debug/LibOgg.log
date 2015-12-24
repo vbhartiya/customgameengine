@@ -1,16 +1,16 @@
-﻿Build started 15/12/2015 2:37:40 PM.
-     1>Project "C:\Users\Vishesh\Documents\Visual Studio 2015\Projects\Engine\LibOgg\LibOgg.vcxproj" on node 2 (Build target(s)).
+﻿Build started 24/12/2015 10:06:39 AM.
+     1>Project "C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\LibOgg\LibOgg.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\LibOgg.pdb" /Gd /TC /analyze- /errorReport:prompt ..\EngineCore\Ext\libogg\src\bitwise.c ..\EngineCore\Ext\libogg\src\framing.c
          framing.c
          bitwise.c
          Generating Code...
        Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"C:\Users\Vishesh\Documents\Visual Studio 2015\Projects\Engine\Debug\LibOgg.lib" /NOLOGO Debug\bitwise.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\Debug\LibOgg.lib" /NOLOGO Debug\bitwise.obj
          Debug\framing.obj
-         LibOgg.vcxproj -> C:\Users\Vishesh\Documents\Visual Studio 2015\Projects\Engine\Debug\LibOgg.lib
-     1>Done Building Project "C:\Users\Vishesh\Documents\Visual Studio 2015\Projects\Engine\LibOgg\LibOgg.vcxproj" (Build target(s)).
+         LibOgg.vcxproj -> C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\Debug\LibOgg.lib
+     1>Done Building Project "C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\LibOgg\LibOgg.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.61
+Time Elapsed 00:00:00.48

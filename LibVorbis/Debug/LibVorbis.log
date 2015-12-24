@@ -1,10 +1,7 @@
-﻿Build started 15/12/2015 3:27:50 PM.
-     1>Project "C:\Users\Vishesh\Documents\Visual Studio 2015\Projects\Engine\LibVorbis\LibVorbis.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _USE_MATH_DEFINES /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\LibVorbis.pdb" /Gd /TC /analyze- /errorReport:prompt ..\EngineCore\Ext\libvorbis\lib\vorbisfile.c
-         vorbisfile.c
-       Lib:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"C:\Users\Vishesh\Documents\Visual Studio 2015\Projects\Engine\Debug\LibVorbis.lib" /NOLOGO Debug\analysis.obj
+﻿Build started 24/12/2015 10:06:34 AM.
+     1>Project "C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\LibVorbis\LibVorbis.vcxproj" on node 2 (Build target(s)).
+     1>Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\Lib.exe /OUT:"C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\Debug\LibVorbis.lib" /NOLOGO Debug\analysis.obj
          Debug\bitrate.obj
          Debug\block.obj
          Debug\codebook.obj
@@ -27,9 +24,9 @@
          Debug\vorbisenc.obj
          Debug\vorbisfile.obj
          Debug\window.obj
-         LibVorbis.vcxproj -> C:\Users\Vishesh\Documents\Visual Studio 2015\Projects\Engine\Debug\LibVorbis.lib
-     1>Done Building Project "C:\Users\Vishesh\Documents\Visual Studio 2015\Projects\Engine\LibVorbis\LibVorbis.vcxproj" (Build target(s)).
+         LibVorbis.vcxproj -> C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\Debug\LibVorbis.lib
+     1>Done Building Project "C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\LibVorbis\LibVorbis.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.53
+Time Elapsed 00:00:00.45

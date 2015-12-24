@@ -214,6 +214,7 @@
     <ClCompile Include="Source\Maths\Vec3.cpp" />
     <ClCompile Include="Source\Maths\Vec4.cpp" />
     <ClCompile Include="Source\Physics\collider.cpp" />
+    <ClCompile Include="Source\Physics\physicsmanager.cpp" />
     <ClCompile Include="Source\Physics\rigidbody.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -267,6 +268,7 @@
     <ClInclude Include="Source\Maths\Vec3.h" />
     <ClInclude Include="Source\Maths\Vec4.h" />
     <ClInclude Include="Source\Physics\collider.h" />
+    <ClInclude Include="Source\Physics\physicsmanager.h" />
     <ClInclude Include="Source\Physics\rigidbody.h" />
     <ClInclude Include="Source\Utility\fileutil.h" />
     <ClInclude Include="Source\Utility\imageutil.h" />

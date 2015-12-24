@@ -69,10 +69,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>C:\Users\Vishesh\Documents\Visual Studio 2015\Projects\Engine\EngineCore\Ext\libogg\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)EngineCore\Ext\libogg\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>C:\Users\Vishesh\Documents\Visual Studio 2015\Projects\Engine\EngineCore\Ext\libogg\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)EngineCore\Ext\libogg\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
