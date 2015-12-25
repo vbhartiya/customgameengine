@@ -5,7 +5,7 @@
 namespace engine {	namespace physics {
 
 	struct Collision {
-		maths::Vec2 normal;
+		maths::Vec3 normal;
 		float depth;
 	};
 
@@ -36,10 +36,10 @@ namespace engine {	namespace physics {
 		void UpdatePosition(const maths::Vec3& position);
 		void UpdateSize(const maths::Vec2& size);
 
-		bool IsColliding(const Collider& other);
+		Collision IsColliding(const Collider& other);
 	private:
-		bool AABBvsAABB(const Collider& other);
-		bool CirclevsCircle(const Collider& other);
+		Collision AABBvsAABB(const Collider& other);
+		Collision CirclevsCircle(const Collider& other);
 
 		//inline const ColliderType& GetType() const { return m_type; }
 	};

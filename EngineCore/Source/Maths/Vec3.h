@@ -17,6 +17,9 @@ namespace engine { namespace maths {
 		Vec3& mul(const float other);
 		Vec3& div(const Vec3& other);
 		Vec3& div(const float other);
+
+		float dot(const Vec3& other);
+		float length();
 		
 		Vec3& operator+=(const Vec3& other);
 		Vec3& operator-=(const Vec3& other);

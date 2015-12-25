@@ -26,8 +26,14 @@ namespace engine {	namespace physics {
 	void PhysicsManager::Update() {
 		for (int i = 0, size = m_colliders.size() - 1; i < size; i++) {
 			for (int j = i + 1; j < size + 1; j++) {
-				if (m_colliders[i]->IsColliding(*m_colliders[j]))
-					std::cout << "Two Objects are Colliding" << std::endl;
+				Collision col = m_colliders[i]->IsColliding(*m_colliders[j]);
+				if (col.normal != maths::Vec3(0, 0, 0)) {
+					if(m_collidables[m_colliders[i]] != nullptr)
+						m_collidables[m_colliders[i]]->ResolveCollision(col, m_collidables[m_colliders[j]]);
+
+					if (m_collidables[m_colliders[j]] != nullptr)
+						m_collidables[m_colliders[j]]->ResolveCollision(col, m_collidables[m_colliders[i]]);
+				}
 			}
 		}
 	}

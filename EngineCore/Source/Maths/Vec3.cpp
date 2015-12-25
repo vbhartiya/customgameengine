@@ -68,6 +68,14 @@ namespace engine {	namespace maths {
 		return *this;
 	}
 
+	float Vec3::dot(const Vec3& other) {
+		return x*other.x + y*other.y + z*other.z;
+	}
+
+	float Vec3::length() {
+		return sqrt(this->dot(*this));
+	}
+
 	Vec3& Vec3::operator+=(const Vec3& other) {
 		return this->add(other);
 	}
