@@ -40,6 +40,14 @@ namespace engine {	namespace maths {
 		return *this;
 	}
 
+
+	Vec2& Vec2::div(const float& other) {
+		x /= other;
+		y /= other;
+		
+		return *this;
+	}
+
 	Vec2& Vec2::operator+=(const Vec2& other) {
 		return this->add(other);
 	}
@@ -53,6 +61,10 @@ namespace engine {	namespace maths {
 	}
 
 	Vec2& Vec2::operator/=(const Vec2& other) {
+		return this->div(other);
+	}
+
+	Vec2& Vec2::operator/=(const float& other) {
 		return this->div(other);
 	}
 
@@ -77,6 +89,10 @@ namespace engine {	namespace maths {
 	}
 
 	Vec2 operator/(Vec2 left, const Vec2& right) {
+		return left.div(right);
+	}
+
+	Vec2 operator/(Vec2 left, const float& right) {
 		return left.div(right);
 	}
 

@@ -40,7 +40,7 @@ public:
 		CRigidBody* physics = new CRigidBody(1);
 		m_mainActor->AddComponent(physics);
 
-		CCollider* collider = new CCollider(Vec3(0, 0, 0), Vec3(1, 1, 0));
+		CCollider* collider = new CCollider(Vec3(0.5f, 0.5f, 0), 1);
 		m_mainActor->AddComponent(collider);
 		
 		m_mainActor->Start();
@@ -52,7 +52,7 @@ public:
 		CSprite* floor_sprite = new CSprite(*m_layer);
 		m_floor->AddComponent(floor_sprite);
 
-		CCollider* floor_collider = new CCollider(Vec3(0, 0, 0), Vec3(1, 1, 0));
+		CCollider* floor_collider = new CCollider(Vec3(0.5f, 0.5f, 0), Vec3(1, 1, 0));
 		m_floor->AddComponent(floor_collider);
 	}
 

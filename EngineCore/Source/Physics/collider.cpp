@@ -23,6 +23,9 @@ namespace engine {	namespace physics {
 			col =  AABBvsAABB(other);
 		else if (m_type == ColliderType::Circle && other.m_type == ColliderType::Circle)
 			col = CirclevsCircle(other);
+		else if ((m_type == ColliderType::Circle && other.m_type == ColliderType::AABB) ||
+				 (m_type == ColliderType::AABB && other.m_type == ColliderType::Circle))
+			col = AABBvsCircle(other);
 
 		return col;
 	}
@@ -33,8 +36,9 @@ namespace engine {	namespace physics {
 			m_circle.m_position = position;
 			break;
 		case ColliderType::AABB:
-			m_aabb.m_topRight = position + (m_aabb.m_topRight - m_aabb.m_bottomLeft);
-			m_aabb.m_bottomLeft = position;
+			maths::Vec3 size = (m_aabb.m_topRight - m_aabb.m_bottomLeft) / 2.0f;
+			m_aabb.m_topRight = position + size;
+			m_aabb.m_bottomLeft = position - size;
 			break;
 		}
 	}
@@ -42,10 +46,13 @@ namespace engine {	namespace physics {
 	void Collider::UpdateSize(const maths::Vec2& size) {
 		switch (m_type) {
 		case ColliderType::Circle:
-			m_circle.m_raidus = (size.x > size.y) ? size.x : size.y;
+			m_circle.m_raidus = maths::Min(size.x, size.y);
 			break;
 		case ColliderType::AABB:
-			m_aabb.m_topRight = m_aabb.m_bottomLeft + maths::Vec3(size.x, size.y);
+			maths::Vec3 position = (m_aabb.m_topRight + m_aabb.m_bottomLeft) / 2.0f;
+			maths::Vec3 size3(size.x/2.0f, size.y/2.0f);
+			m_aabb.m_bottomLeft = position - size3;
+			m_aabb.m_topRight = position + size3;
 			break;
 		}
 	}
@@ -115,6 +122,54 @@ namespace engine {	namespace physics {
 			col.depth = m_circle.m_raidus;
 			col.normal = maths::Vec3(1, 0, 0);
 		}
+
+		return col;
+	}
+
+	Collision Collider::AABBvsCircle(const Collider& other) {
+		const Collider &aabb = (other.m_type == ColliderType::AABB) ? other : *this;
+		const Collider &circle = (other.m_type == ColliderType::AABB) ? *this : other;
+
+		Collision col;
+
+		maths::Vec3 n = circle.m_circle.m_position - (aabb.m_aabb.m_bottomLeft + aabb.m_aabb.m_topRight) / 2.0f;
+		maths::Vec3 closest = n;
+
+		maths::Vec3 half_extents = (aabb.m_aabb.m_topRight - aabb.m_aabb.m_bottomLeft) / 2.0f;
+		
+		closest.x = maths::Min(maths::Max(closest.x, -half_extents.x), half_extents.x);
+		closest.y = maths::Min(maths::Max(closest.y, -half_extents.y), half_extents.y);
+
+		bool inside = false;
+
+		if (n == closest) {
+			inside = true;
+
+			if (abs(n.x) < abs(n.y)) {
+				if (closest.x > 0)
+					closest.x = half_extents.x;
+				else
+					closest.x = -half_extents.x;
+			}
+			else {
+				if (closest.y > 0)
+					closest.y = half_extents.y;
+				else
+					closest.y = -half_extents.y;
+			}
+		}
+
+		maths::Vec3 normal = n - closest;
+		float d = normal.lengthsqrd();
+		float r = circle.m_circle.m_raidus;
+
+		if (d > r*r && !inside)
+			return col;
+
+		d = sqrt(d);
+
+		col.normal = (inside) ? -1 * normal/d : normal/d;
+		col.depth = r - d;
 
 		return col;
 	}

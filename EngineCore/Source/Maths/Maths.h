@@ -15,4 +15,16 @@ namespace engine {	namespace maths {
 		return degrees * ((float)M_PI / 180.0f);
 	}
 
+	inline float Min(float a, float b) {
+		return (a < b) ? a : b;
+	}
+
+	inline float Max(float a, float b) {
+		return (a > b) ? a : b;
+	}
+	/*
+	float Clamp(float num, float min, float max) {
+		return Min(Max(num, min), max);
+	}*/
+
 }	}

@@ -11,10 +11,10 @@ namespace engine {	namespace component {
 		friend class Actor;
 	private:
 		physics::Collider* m_collider;
-		maths::Vec2 m_normalized;
+		maths::Vec3 m_normalizedCenter, m_size;
 	public:
-		CCollider(const maths::Vec3& bottomLeft, const maths::Vec3& topRight);
-		CCollider(const maths::Vec3& position, const float& radius);
+		CCollider(const maths::Vec3& center, const maths::Vec3& size);
+		CCollider(const maths::Vec3& position, const float& diameter);
 
 		void Start() override;
 		void Update(float deltaTime) override;

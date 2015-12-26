@@ -20,6 +20,7 @@ namespace engine { namespace maths {
 
 		float dot(const Vec3& other);
 		float length();
+		float lengthsqrd();
 		
 		Vec3& operator+=(const Vec3& other);
 		Vec3& operator-=(const Vec3& other);

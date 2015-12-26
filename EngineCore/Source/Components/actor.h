@@ -2,6 +2,8 @@
 
 #include <vector>
 
+#include "../Graphics/Layers/group.h"
+
 namespace engine {	namespace component {
 
 	class Component;

@@ -40,6 +40,7 @@ namespace engine {	namespace physics {
 	private:
 		Collision AABBvsAABB(const Collider& other);
 		Collision CirclevsCircle(const Collider& other);
+		Collision AABBvsCircle(const Collider& other);
 
 		//inline const ColliderType& GetType() const { return m_type; }
 	};
