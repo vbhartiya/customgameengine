@@ -6,16 +6,16 @@
 
 #include "../Graphics/sprite.h"
 #include "../Graphics/texture.h"
-#include "../Graphics/Layers/layer.h"
 
 namespace engine {	namespace component {
 
 	class CSprite : public Component {
+		friend class Actor;
 	private:
 		graphics::Sprite* m_sprite;
 	public:
-		CSprite(graphics::Layer& layer);
-		CSprite(graphics::Layer& layer, graphics::Texture* texture);
+		CSprite(maths::Vec4 color);
+		CSprite(graphics::Texture* texture);
 
 		void Start() override;
 		void Update(float deltaTime) override;

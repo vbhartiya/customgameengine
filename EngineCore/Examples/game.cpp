@@ -10,6 +10,7 @@ private:
 	Window* m_window;
 	Layer* m_layer;
 	Actor *m_mainActor, *m_floor;
+	float angle = 0;
 public:
 	Game() {
 
@@ -33,14 +34,15 @@ public:
 		m_mainActor = new Actor("Main Actor");
 		m_mainActor->GetTransform()->SetPosition(Vec3(0, 8, 0));
 		m_mainActor->GetTransform()->SetScale(Vec2(2, 1));
-		
-		CSprite* sprite = new CSprite(*m_layer, tex[0]);
-		m_mainActor->AddComponent(sprite);
+		m_mainActor->GetTransform()->SetRotation(Vec3(0, 0, 45));
+
+		CSprite* sprite = new CSprite(tex[0]);
+		m_mainActor->AddComponent(sprite, m_layer);
 
 		CRigidBody* physics = new CRigidBody(1);
 		m_mainActor->AddComponent(physics);
 
-		CCollider* collider = new CCollider(Vec3(0.5f, 0.5f, 0), 1);
+		CCollider* collider = new CCollider(Vec3(0.5f, 0.5f, 0), Vec3(1, 1, 0));
 		m_mainActor->AddComponent(collider);
 		
 		m_mainActor->Start();
@@ -49,8 +51,8 @@ public:
 		m_floor->GetTransform()->SetPosition(Vec3(-16, -1, 0));
 		m_floor->GetTransform()->SetScale(Vec2(32, 2));
 
-		CSprite* floor_sprite = new CSprite(*m_layer);
-		m_floor->AddComponent(floor_sprite);
+		CSprite* floor_sprite = new CSprite(Vec4(1,1,1,1));
+		m_floor->AddComponent(floor_sprite, m_layer);
 
 		CCollider* floor_collider = new CCollider(Vec3(0.5f, 0.5f, 0), Vec3(1, 1, 0));
 		m_floor->AddComponent(floor_collider);

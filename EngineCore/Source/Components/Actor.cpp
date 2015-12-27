@@ -1,5 +1,6 @@
 #include "actor.h"
 #include "component.h"
+#include "csprite.h"
 #include "ctransform.h"
 #include "crigidbody.h"
 #include "ccoliider.h"
@@ -12,6 +13,7 @@ namespace engine { namespace component {
 		m_name = name;
 		m_transform = new CTransform(this);
 		m_rigidbody = nullptr;
+		m_actor_group = nullptr;
 	}
 
 	Actor::~Actor() {
@@ -24,6 +26,18 @@ namespace engine { namespace component {
 	void Actor::AddComponent(Component* component) {		
 		m_components.push_back(component);
 		m_components.back()->SetParent(this);
+	}
+
+	void Actor::AddComponent(CSprite* component, graphics::Layer* layer) {
+		m_components.push_back(component);
+		m_components.back()->SetParent(this);
+
+		if (m_actor_group == nullptr) {
+			m_actor_group = new graphics::Group(m_transform->m_rotation_matrix);
+			layer->Add(m_actor_group);
+		}
+
+		m_actor_group->Add(component->m_sprite);
 	}
 
 	void Actor::AddComponent(CRigidBody* component) {

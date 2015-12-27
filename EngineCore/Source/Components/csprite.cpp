@@ -2,15 +2,13 @@
 
 namespace engine {	namespace component {
 
-	CSprite::CSprite(graphics::Layer& layer) {
-		m_sprite = new graphics::Sprite();
-		layer.Add(m_sprite);
+	CSprite::CSprite(maths::Vec4 color) {
+		m_sprite = new graphics::Sprite(0, 0, 1, 1, color);
 	}
 
-	CSprite::CSprite(graphics::Layer& layer, graphics::Texture* texture)
+	CSprite::CSprite(graphics::Texture* texture)
 	{
 		m_sprite = new graphics::Sprite(0, 0, 1, 1, texture);
-		layer.Add(m_sprite);
 	}
 
 	void CSprite::Start() {

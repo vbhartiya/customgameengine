@@ -13,6 +13,8 @@ namespace engine {	namespace graphics {
 		~Group();
 		void Submit(Renderer2D* renderer, const maths::Vec2& scale) const override;
 		void Add(Renderable2D* renderable);
+
+		inline void SetTransformation(const maths::Mat4& transformation) { m_transformationMatrix = transformation; }
 	};
 
 }	}
