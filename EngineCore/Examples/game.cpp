@@ -34,7 +34,6 @@ public:
 		m_mainActor = new Actor("Main Actor");
 		m_mainActor->GetTransform()->SetPosition(Vec3(0, 8, 0));
 		m_mainActor->GetTransform()->SetScale(Vec2(2, 1));
-		m_mainActor->GetTransform()->SetRotation(Vec3(0, 0, 45));
 
 		CSprite* sprite = new CSprite(tex[0]);
 		m_mainActor->AddComponent(sprite, m_layer);
@@ -63,8 +62,18 @@ public:
 	}
 
 	void Update(float deltaTime) override {
-		m_mainActor->Update(deltaTime);
+		float axis = 0;
+
+		if (m_window->IsKeyTyped(GLFW_KEY_D))
+			axis = 1;
+		else if (m_window->IsKeyTyped(GLFW_KEY_A))
+			axis = -1;
+
+		m_mainActor->GetRigidBody()->AddForce(Vec3(0, abs(axis)*300, 0));
+		m_mainActor->GetTransform()->SetRotation(Vec3(0, 0, Sign(axis) * m_mainActor->GetRigidBody()->GetVelocity().y));
+
 		m_floor->Update(deltaTime);
+		m_mainActor->Update(deltaTime);
 	}
 }; 
 

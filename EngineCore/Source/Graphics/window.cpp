@@ -98,7 +98,7 @@ namespace engine {	namespace graphics {
 			return false;
 		}
 
-		return m_keyStates[keycode] && !m_keys[keycode];
+		return !m_keyStates[keycode] && m_keys[keycode];
 	}
 
 	bool Window::IsMouseButtonPressed(unsigned int button) const {

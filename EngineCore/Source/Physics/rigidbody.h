@@ -2,6 +2,7 @@
 
 #include "../Maths/Maths.h"
 #include "collider.h"
+#include <list>
 
 namespace engine {	namespace physics {
 
@@ -28,6 +29,9 @@ namespace engine {	namespace physics {
 		maths::Vec3 m_acceleration;
 		maths::Vec3 m_velocity, m_positionCorrection;
 		MassData m_massData;
+
+		std::list<maths::Vec3> m_forces_1, m_forces_2;
+		std::list<maths::Vec3>* m_curr_forces, *m_other_forces;
 		float m_gravityScale, m_restitution;
 	public:
 		RigidBody(float mass, float inertia);

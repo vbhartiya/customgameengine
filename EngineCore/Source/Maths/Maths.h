@@ -22,6 +22,10 @@ namespace engine {	namespace maths {
 	inline float Max(float a, float b) {
 		return (a > b) ? a : b;
 	}
+
+	inline float Sign(float n) {
+		return (n < 0) ? -1 : 1;
+	}
 	/*
 	float Clamp(float num, float min, float max) {
 		return Min(Max(num, min), max);

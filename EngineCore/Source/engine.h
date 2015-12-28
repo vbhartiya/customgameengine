@@ -83,10 +83,9 @@ namespace engine {
 					updateTimer += updateTick;
 					updates++;
 					Update(updateTick);
+					m_window->Update();
 				}
-
-				m_window->Update();
-
+				
 				frames++;
 
 				if (m_timer->Elapsed() - frameTimer > 1.0f) {
@@ -100,6 +99,7 @@ namespace engine {
 
 					Tick();
 				}
+
 			}
 		}
 	};
