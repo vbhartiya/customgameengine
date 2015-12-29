@@ -63,6 +63,8 @@ namespace engine { namespace component {
 	}
 
 	void Actor::Update(float deltaTime) {
+		if (!enabled) return;
+
 		for (unsigned int i = 0; i < m_components.size(); i++) {
 			m_components[i]->Update(deltaTime);
 		}

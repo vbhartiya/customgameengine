@@ -21,6 +21,7 @@ namespace engine {	namespace component {
 		CTransform* m_transform;
 		CRigidBody* m_rigidbody;
 		std::vector< Component* > m_components;
+		bool enabled;
 	public:
 		Actor(const char* name);
 		~Actor();
@@ -33,6 +34,9 @@ namespace engine {	namespace component {
 
 		inline CTransform* GetTransform() const { return m_transform; }
 		inline CRigidBody* GetRigidBody() const { return m_rigidbody; }
+
+		inline void Enable() { enabled = true; }
+		inline void Disable() { enabled = false; }
 	};
 
 }	}

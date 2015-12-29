@@ -196,6 +196,7 @@
     <ClCompile Include="Source\Components\csprite.cpp" />
     <ClCompile Include="Source\Components\ctransform.cpp" />
     <ClCompile Include="Source\Components\crigidbody.cpp" />
+    <ClCompile Include="Source\Components\scene.cpp" />
     <ClCompile Include="Source\Graphics\batchrenderer2D.cpp" />
     <ClCompile Include="Source\Graphics\Buffers\indexbuffer.cpp" />
     <ClCompile Include="main.cpp" />
@@ -248,6 +249,7 @@
     <ClInclude Include="Source\Components\crigidbody.h" />
     <ClInclude Include="Source\Components\csprite.h" />
     <ClInclude Include="Source\Components\ctransform.h" />
+    <ClInclude Include="Source\Components\scene.h" />
     <ClInclude Include="Source\engine.h" />
     <ClInclude Include="Source\Graphics\batchrenderer2D.h" />
     <ClInclude Include="Source\Graphics\Buffers\indexbuffer.h" />
@@ -288,6 +290,7 @@
     <Font Include="arial.ttf" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="city_back.png" />
     <Image Include="test.jpg" />
     <Image Include="test2.jpg" />
   </ItemGroup>

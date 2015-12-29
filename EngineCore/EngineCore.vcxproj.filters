@@ -339,6 +339,9 @@
     <ClCompile Include="Source\Components\ccollider.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Components\scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ext\FreeType\include\freetype\config\ftheader.h">
@@ -512,6 +515,9 @@
     <ClInclude Include="Source\Components\ccoliider.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Components\scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="Misc\Process.txt" />
@@ -537,6 +543,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="test.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="city_back.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

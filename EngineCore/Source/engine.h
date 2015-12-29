@@ -11,6 +11,7 @@
 
 #include "Maths/Maths.h"
 
+#include "Components/scene.h"
 #include "Components/actor.h"
 #include "Components/csprite.h"
 #include "Components/ctransform.h"
