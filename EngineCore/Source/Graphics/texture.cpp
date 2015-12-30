@@ -1,8 +1,8 @@
 #include "texture.h"
 
 namespace engine { namespace graphics {
-	Texture::Texture(const std::string& path) 
-		:m_path(path)
+	Texture::Texture(const std::string& name, const std::string& path)
+		: m_path(path), m_name(name)
 	{
 		m_texID = Load();
 	}

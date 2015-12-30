@@ -348,6 +348,9 @@
     <ClCompile Include="Source\Components\actorfactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Graphics\texturemanager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ext\FreeType\include\freetype\config\ftheader.h">
@@ -528,6 +531,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Source\Components\actorfactory.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Graphics\texturemanager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

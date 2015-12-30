@@ -1,0 +1,14 @@
+<Scene name="Main Scene">
+  <Actor name="Main Actor">
+    <Transform pY="5"/>
+    <Sprite color="FF6666FF"/>
+    <RigidBody mass="1" gravityScale="1" />
+    <CircleCollider centerX="0.5" centerY="0.5" diameter="1"/>
+  </Actor>
+
+  <Actor name="Floor">
+    <Transform pX="-16" pY="-9" sX="32" />
+    <Sprite color="FF4444FF"/>
+    <AxisAlignedBoundingBox centerX="0.5" centerY="0.5" sizeX="1" sizeY="1" />
+  </Actor>
+ </Scene>
