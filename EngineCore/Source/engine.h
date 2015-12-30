@@ -17,6 +17,7 @@
 #include "Components/ctransform.h"
 #include "Components/crigidbody.h"
 #include "Components/ccoliider.h"
+#include "Components\/actorfactory.h"
 
 namespace engine {
 	class Engine {

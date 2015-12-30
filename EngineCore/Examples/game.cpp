@@ -32,7 +32,7 @@ public:
 		m_layer->SetScale(Vec2(m_window->GetWidth() / 32.0f, m_window->GetHeight() / 18.0f));
 
 		m_mainScene = new Scene("Main");
-
+		/*
 		Actor* m_mainActor = new Actor("Main Actor");
 		m_mainActor->GetTransform()->SetPosition(Vec3(0, 0, 0));
 		m_mainActor->GetTransform()->SetScale(Vec2(1,1));
@@ -60,6 +60,13 @@ public:
 
 		m_mainScene->Add(m_mainActor);
 		m_mainScene->Add(m_floor);
+		*/
+
+		tinyxml2::XMLDocument doc;
+		doc.LoadFile("scene.xml");
+
+		m_mainScene->Add(ActorFactory::CreateActorFromXML(doc.FirstChildElement()->FirstChildElement(), m_layer));
+		m_mainScene->Add(ActorFactory::CreateActorFromXML(doc.FirstChildElement()->FirstChildElement()->NextSiblingElement(), m_layer));
 	}
 
 	void Render() override {
@@ -90,4 +97,4 @@ int main() {
 	game.Start();
 
 	return 0;
-}   
+}

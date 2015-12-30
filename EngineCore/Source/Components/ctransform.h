@@ -16,6 +16,8 @@ namespace engine {	namespace component {
 	public:
 		CTransform(Actor* parent);
 		void Translate(const maths::Vec3& translation);
+
+		void InitializeFromXML(tinyxml2::XMLElement* element);
 				
 		inline void SetPosition(const maths::Vec3& position) { m_position = position; SetRotationMatrix(); }
 		inline void SetRotation(const maths::Vec3& rotation) { m_rotation = rotation; SetRotationMatrix(); }

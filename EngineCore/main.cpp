@@ -30,6 +30,9 @@
 
 #include <FreeImage/FreeImage.h>
 
+#include "Ext/TinyXML/tinyxml2.h"
+#include <map>
+
 #if 0
 int main() {
 

@@ -12,6 +12,8 @@ namespace engine {	namespace component {
 	private:
 		physics::RigidBody* m_rigidbody;
 	public:
+		static CRigidBody* CreateFromXML(tinyxml2::XMLElement* element);
+
 		CRigidBody(float mass);
 		~CRigidBody();
 

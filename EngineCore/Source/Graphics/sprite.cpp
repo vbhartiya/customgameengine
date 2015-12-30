@@ -21,6 +21,12 @@ namespace engine {	namespace graphics {
 
 	}
 
+	Sprite::Sprite(float x, float y, float width, float height, unsigned int color)
+		: Renderable2D(maths::Vec3(x, y, 0), maths::Vec2(width, height), color)
+	{
+
+	}
+
 	Sprite::Sprite(float x, float y, float width, float height, Texture* texture)
 		: Renderable2D(maths::Vec3(x, y, 0), maths::Vec2(width, height), maths::Vec4(1, 1, 1, 1))
 	{

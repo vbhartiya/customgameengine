@@ -14,7 +14,10 @@ namespace engine {	namespace component {
 	private:
 		graphics::Sprite* m_sprite;
 	public:
+		static CSprite* CreateFromXML(tinyxml2::XMLElement* element);
+
 		CSprite(maths::Vec4 color);
+		CSprite(unsigned int color);
 		CSprite(graphics::Texture* texture);
 
 		void Start() override;

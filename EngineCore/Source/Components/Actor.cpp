@@ -14,6 +14,7 @@ namespace engine { namespace component {
 		m_transform = new CTransform(this);
 		m_rigidbody = nullptr;
 		m_actor_group = nullptr;
+		m_actor_layer = nullptr;
 	}
 
 	Actor::~Actor() {
@@ -28,13 +29,13 @@ namespace engine { namespace component {
 		m_components.back()->SetParent(this);
 	}
 
-	void Actor::AddComponent(CSprite* component, graphics::Layer* layer) {
+	void Actor::AddComponent(CSprite* component) {
 		m_components.push_back(component);
 		m_components.back()->SetParent(this);
 
 		if (m_actor_group == nullptr) {
 			m_actor_group = new graphics::Group(m_transform->m_rotation_matrix);
-			layer->Add(m_actor_group);
+			m_actor_layer->Add(m_actor_group);
 		}
 
 		m_actor_group->Add(component->m_sprite);

@@ -2,6 +2,51 @@
 
 namespace engine {	namespace component {
 
+	CCollider* CCollider::CreateFromXML(tinyxml2::XMLElement* element) {
+		std::string type(element->Value());
+
+		maths::Vec3 center(0.5f, 0.5f, 0);
+
+		if (element->Attribute("centerX")) {
+			center.x = element->FloatAttribute("centerX");
+		}
+
+		if (element->Attribute("centerY")) {
+			center.y = element->FloatAttribute("centerY");
+		}
+
+		if (element->Attribute("centerZ")) {
+			center.z = element->FloatAttribute("centerZ");
+		}
+
+		if (type == "AxisAlignedBoundingBox") {
+			maths::Vec3 size(1, 1, 1);
+
+			if (element->Attribute("sizeX")) {
+				size.x = element->FloatAttribute("sizeX");
+			}
+
+			if (element->Attribute("sizeY")) {
+				size.y = element->FloatAttribute("sizeY");
+			}
+
+			if (element->Attribute("sizeZ")) {
+				size.z = element->FloatAttribute("sizeZ");
+			}
+
+			return new CCollider(center, size);
+		}
+		else if (type == "CircleCollider") {
+			float diameter = 1.0f;
+
+			if (element->Attribute("diameter")) {
+				diameter = element->FloatAttribute("diameter");
+			}
+
+			return new CCollider(center, diameter);
+		}
+	}
+
 	CCollider::CCollider(const maths::Vec3& center, const maths::Vec3& size)
 		: m_normalizedCenter(center), m_size(size)
 	{

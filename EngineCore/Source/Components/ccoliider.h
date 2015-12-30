@@ -13,6 +13,8 @@ namespace engine {	namespace component {
 		physics::Collider* m_collider;
 		maths::Vec3 m_normalizedCenter, m_size;
 	public:
+		static CCollider* CreateFromXML(tinyxml2::XMLElement* element);
+
 		CCollider(const maths::Vec3& center, const maths::Vec3& size);
 		CCollider(const maths::Vec3& position, const float& diameter);
 

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "actor.h"
+#include "../../Ext/TinyXML/tinyxml2.h"
 
 namespace engine {	namespace component {
 

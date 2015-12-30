@@ -38,6 +38,12 @@ namespace engine {	namespace graphics {
 			SetUVDefaults();
 		}
 
+		Renderable2D(maths::Vec3 position, maths::Vec2 size, unsigned int color) 
+			: m_position(position), m_size(size), m_texture(nullptr), m_color(color)
+		{
+			SetUVDefaults();
+		}
+
 		~Renderable2D() {}
 
 		virtual void Submit(Renderer2D* renderer, const maths::Vec2& fontScale) const {
