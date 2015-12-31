@@ -1,6 +1,7 @@
 #pragma once
 
 #include "actor.h"
+#include "componentregistery.h"
 #include "../../Ext/TinyXML/tinyxml2.h"
 
 namespace engine {	namespace component {
@@ -12,8 +13,9 @@ namespace engine {	namespace component {
 		Component() = default;
 		Component(Actor* parent) { m_parent = parent; }
 
-		virtual void Start() {};
-		virtual void Update(float deltaTime) {};
+		virtual void Start() {}
+		virtual void Update(float deltaTime) {}
+		inline virtual void PostAdd() {}
 
 		inline void SetParent(Actor* parent) { m_parent = parent; }
 

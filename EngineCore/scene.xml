@@ -1,7 +1,7 @@
 <Scene name="Main Scene">
   <Actor name="Main Actor">
     <Transform pY="5"/>
-    <Sprite color="FF5555FF"/>
+    <Sprite texName="CityBack" texPath="city_back.png"/>
     <RigidBody mass="1" gravityScale="1" />
     <CircleCollider centerX="0.5" centerY="0.5" radius="2"/>
   </Actor>

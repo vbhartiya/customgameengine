@@ -1,11 +1,26 @@
 #include "csprite.h"
 
 namespace engine {	namespace component {
+	
+	ComponentRegistry CSprite::reg("Sprite", CreateFromXML);
 
-	CSprite* CSprite::CreateFromXML(tinyxml2::XMLElement* element) {
+	Component* CSprite::CreateFromXML(tinyxml2::XMLElement* element) {
 		unsigned int color = 0xFFFFFFFF;
 		if (const char* s = element->Attribute("color")) {
 			color = std::stoul(s, NULL, 16);
+		}
+
+		const char* texName, *texPath;
+		if (texName = element->Attribute("texName")) {
+			graphics::Texture* tex = graphics::TextureManager::Get(texName);
+			if (tex == nullptr) {
+				tex = new graphics::Texture(texName, element->Attribute("texPath"));
+				graphics::TextureManager::Add(tex);
+			}
+
+			CSprite* sprite = new CSprite(tex);
+			sprite->SetSpriteColor(color);
+			return sprite;
 		}
 
 		return new CSprite(color);
@@ -33,5 +48,5 @@ namespace engine {	namespace component {
 		m_sprite->SetPosition(m_parent->GetTransform()->GetPosition());
 		m_sprite->SetSize(m_parent->GetTransform()->GetScale());
 	}
-
+	
 }	}

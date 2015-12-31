@@ -5,6 +5,7 @@
 #include <GLFW/glfw3.h>
 
 #include "fontmanager.h"
+#include "texturemanager.h"
 #include "../Maths/Maths.h"
 #include "../Audio/audiomanager.h"
 #include "../Physics/physicsmanager.h"

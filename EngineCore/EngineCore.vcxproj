@@ -251,6 +251,7 @@
     <ClInclude Include="Source\Components\component.h" />
     <ClInclude Include="Source\Audio\sound.h" />
     <ClInclude Include="Source\Audio\audiomanager.h" />
+    <ClInclude Include="Source\Components\componentregistery.h" />
     <ClInclude Include="Source\Components\crigidbody.h" />
     <ClInclude Include="Source\Components\csprite.h" />
     <ClInclude Include="Source\Components\ctransform.h" />

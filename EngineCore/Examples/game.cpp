@@ -17,14 +17,12 @@ public:
 	}
 
 	~Game() {
-		delete m_layer;
 		delete m_mainScene;
+		delete m_layer;
 	}
 
 	void Init() override {
 		m_window = CreateNewWindow("Game", 960, 540);
-		
-		Texture *tex[] = {new Texture("city_back.png") };
 		
 		m_layer = new Layer(new engine::graphics::BatchRenderer2D(), 
 							new Shader("Source/Shaders/basic.vert", "Source/Shaders/basic.frag"), 

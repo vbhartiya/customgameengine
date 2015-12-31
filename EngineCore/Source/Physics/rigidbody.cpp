@@ -6,13 +6,11 @@ namespace engine {	namespace physics {
 
 	RigidBody::RigidBody(float mass, float inertia)	
 		: m_massData(mass, inertia), m_gravityScale(1), m_restitution(0)
-	{		
-		m_curr_forces = &m_forces_1;
-		m_other_forces = &m_forces_2;
+	{	
 	}
 
 	void RigidBody::AddForce(const maths::Vec3& force) {
- 		m_curr_forces->push_back(force);
+		m_forceSum += force;
 	}
 
 	void RigidBody::ResolveCollision(const Collision& collision, const RigidBody* other) {
@@ -42,21 +40,13 @@ namespace engine {	namespace physics {
 		m_positionCorrection = correction * m_massData.invMass;
 	}
 
-	void RigidBody::Update(float deltaTime) {
-		m_curr_forces = m_other_forces;
-		m_other_forces = (m_other_forces == &m_forces_1) ? &m_forces_2 : &m_forces_1;
-
-		for (maths::Vec3 force : *m_other_forces) {
-			m_forceSum += force;
-		}
-
+	void RigidBody::Update(float deltaTime) {		
 		m_forceSum += m_gravity * m_gravityScale * m_massData.mass;
 		m_acceleration = m_forceSum * m_massData.invMass;
 		m_velocity += m_acceleration * deltaTime + m_positionCorrection * (1/deltaTime);
 
 		m_positionCorrection -= m_positionCorrection;
 		m_forceSum -= m_forceSum;
-		m_other_forces->clear();
 	}
 
 }	}

@@ -27,21 +27,22 @@ namespace engine { namespace component {
 	void Actor::AddComponent(Component* component) {		
 		m_components.push_back(component);
 		m_components.back()->SetParent(this);
+		m_components.back()->PostAdd();
 	}
 
-	void Actor::AddComponent(CSprite* component) {
+	void Actor::ComponentAdded(CSprite* component) {
+		if (m_actor_group != nullptr) return;
+
 		m_components.push_back(component);
 		m_components.back()->SetParent(this);
-
-		if (m_actor_group == nullptr) {
-			m_actor_group = new graphics::Group(m_transform->m_rotation_matrix);
-			m_actor_layer->Add(m_actor_group);
-		}
+		
+		m_actor_group = new graphics::Group(m_transform->m_rotation_matrix);
+		m_actor_layer->Add(m_actor_group);
 
 		m_actor_group->Add(component->m_sprite);
 	}
 
-	void Actor::AddComponent(CRigidBody* component) {
+	void Actor::ComponentAdded(CRigidBody* component) {
 		if (m_rigidbody != nullptr) return;
 
 		m_components.push_back(component);
@@ -50,7 +51,7 @@ namespace engine { namespace component {
 		m_rigidbody = component;
 	}
 
-	void Actor::AddComponent(CCollider* component) {
+	void Actor::ComponentAdded(CCollider* component) {
 		m_components.push_back(component);
 		m_components.back()->SetParent(this);
 

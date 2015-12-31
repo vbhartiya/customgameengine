@@ -34,6 +34,7 @@ namespace engine {	namespace graphics {
 
 	Window::~Window() {
 		FontManager::Clean();
+		TextureManager::Clean();
 		audio::AudioManager::Clean();
 		physics::PhysicsManager::Clean();
 

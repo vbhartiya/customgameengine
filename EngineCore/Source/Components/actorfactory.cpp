@@ -1,7 +1,10 @@
 #include "actorfactory.h"
+#include "ctransform.h"
+
 
 namespace engine {	namespace component {
 
+	ComponentMap ActorFactory::m_creators;
 
 	Actor* ActorFactory::CreateActorFromXML(tinyxml2::XMLElement* element, graphics::Layer* layer) {
 		Actor* newActor = new Actor(element->Attribute("name"));
@@ -21,14 +24,7 @@ namespace engine {	namespace component {
 	}
 
 	void ActorFactory::AddComponentFromXML(Actor* actor, tinyxml2::XMLElement* element) {
-		if (std::string(element->Value()) == "Sprite") {
-			actor->AddComponent(CSprite::CreateFromXML(element));
-		} else if (std::string(element->Value()) == "RigidBody") {
-			actor->AddComponent(CRigidBody::CreateFromXML(element));
-		} else if (std::string(element->Value()) == "CircleCollider" || 
-				   std::string(element->Value()) == "AxisAlignedBoundingBox") {
-			actor->AddComponent(CCollider::CreateFromXML(element));
-		}
+		actor->AddComponent(m_creators[element->Value()](element));
 	}
 
 }	}

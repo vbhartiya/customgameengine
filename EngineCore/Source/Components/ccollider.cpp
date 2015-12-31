@@ -2,7 +2,10 @@
 
 namespace engine {	namespace component {
 
-	CCollider* CCollider::CreateFromXML(tinyxml2::XMLElement* element) {
+	ComponentRegistry CCollider::regCircle("CircleCollider", CreateFromXML);
+	ComponentRegistry CCollider::regAABB("AxisAlignedBoundingBox", CreateFromXML);
+
+	Component* CCollider::CreateFromXML(tinyxml2::XMLElement* element) {
 		std::string type(element->Value());
 
 		maths::Vec3 center(0.5f, 0.5f, 0);

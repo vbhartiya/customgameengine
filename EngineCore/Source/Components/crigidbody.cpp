@@ -1,8 +1,9 @@
 #include "crigidbody.h"
 
 namespace engine {	namespace component {
+	ComponentRegistry CRigidBody::reg("RigidBody", CreateFromXML);
 
-	CRigidBody* CRigidBody::CreateFromXML(tinyxml2::XMLElement* element) {
+	Component* CRigidBody::CreateFromXML(tinyxml2::XMLElement* element) {
 		float mass = 1.0f;
 		if (element->Attribute("mass")) {
 			mass = element->FloatAttribute("mass");

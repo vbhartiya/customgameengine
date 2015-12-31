@@ -27,11 +27,14 @@ namespace engine {	namespace component {
 		Actor(const char* name);
 		~Actor();
 		void AddComponent(Component* component);
-		void AddComponent(CRigidBody* component);
-		void AddComponent(CCollider* component);
-		void AddComponent(CSprite* component);
 		void Start();
 		void Update(float deltaTime);
+
+		void ComponentAdded(Component* component) {}
+
+		void ComponentAdded(CRigidBody* component);
+		void ComponentAdded(CCollider* component);
+		void ComponentAdded(CSprite* component);
 
 		inline void SetLayer(graphics::Layer* layer) { m_actor_layer = layer; }
 
