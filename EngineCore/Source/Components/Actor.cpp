@@ -33,7 +33,7 @@ namespace engine { namespace component {
 	void Actor::ComponentAdded(CSprite* component) {
 		if (m_actor_group != nullptr) return;
 				
-		m_actor_group = new graphics::Group(m_transform->m_rotation_matrix);
+		m_actor_group = new graphics::Group(m_transform->m_transform_matrix);
 		m_actor_layer->Add(m_actor_group);
 
 		m_actor_group->Add(component->m_sprite);

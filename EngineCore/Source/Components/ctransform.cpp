@@ -4,7 +4,7 @@ namespace engine {	namespace component {
 
 	CTransform::CTransform(Actor* const parent) 
 		: m_position(maths::Vec3(0,0,0)), m_rotation(maths::Vec3(0,0,0)), m_scale(maths::Vec2(1,1)), 
-		  m_rotation_matrix(maths::Mat4::Identity()), Component(parent) {}
+		m_transform_matrix(maths::Mat4::Identity()), Component(parent) {}
 
 	void CTransform::InitializeFromXML(tinyxml2::XMLElement* element) {
 		maths::Vec3 pos = m_position, rot = m_rotation;
@@ -44,18 +44,18 @@ namespace engine {	namespace component {
 
 	void CTransform::Translate(const maths::Vec3& translation) {
 		m_position += translation;
-		SetRotationMatrix();
+		SetTransformMatrix();
 	}
 	
-	void CTransform::SetRotationMatrix() {
-		m_rotation_matrix = maths::Mat4::Rotation(m_rotation.x, maths::Vec3(1, 0, 0)) *
+	void CTransform::SetTransformMatrix() {
+		m_transform_matrix = maths::Mat4::Rotation(m_rotation.x, maths::Vec3(1, 0, 0)) *
 							maths::Mat4::Rotation(m_rotation.y, maths::Vec3(0, 1, 0)) *
 							maths::Mat4::Rotation(m_rotation.z, maths::Vec3(0, 0, 1));
 		
-		m_rotation_matrix = maths::Mat4::Translation(m_position) * m_rotation_matrix * maths::Mat4::Translation(-1 * m_position);
+		m_transform_matrix = maths::Mat4::Translation(m_position) * m_transform_matrix * maths::Mat4::Scale(maths::Vec3(m_scale.x, m_scale.y, 1));
 
 		if(m_parent->m_actor_group != nullptr)
-			m_parent->m_actor_group->SetTransformation(m_rotation_matrix);
+			m_parent->m_actor_group->SetTransformation(m_transform_matrix);
 		
 	}
 

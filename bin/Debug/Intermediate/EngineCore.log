@@ -1,11 +1,9 @@
-﻿Build started 1/01/2016 9:12:25 PM.
+﻿Build started 2/01/2016 1:58:03 AM.
      1>Project "C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\EngineCore\EngineCore.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl- /Od /Oy- /D WIN32 /D _LIB /D FT2_BUILD_LIBRARY /D GLEW_STATIC /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D ENABLE_OPENAL /D _MBCS /Gm /EHsc /RTCu /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\bin\Debug\Intermediate\\" /Fd"C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\bin\Debug\Intermediate\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Examples\cinput.cpp
-         cinput.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl- /Od /Oy- /D WIN32 /D _LIB /D FT2_BUILD_LIBRARY /D GLEW_STATIC /D _CRT_SECURE_NO_WARNINGS /D _CRT_NONSTDC_NO_DEPRECATE /D ENABLE_OPENAL /D _MBCS /Gm /EHsc /RTCu /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\bin\Debug\Intermediate\\" /Fd"C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\bin\Debug\Intermediate\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt Source\Components\ctransform.cpp
+         ctransform.cpp
      1>c:\users\agntf\documents\visual studio 2015\projects\engine\enginecore\source\maths\maths.h(27): warning C4244: 'return': conversion from 'int' to 'float', possible loss of data
-     1>c:\users\agntf\documents\visual studio 2015\projects\engine\enginecore\source\graphics\window.h(19): warning C4091: 'static ': ignored on left of 'engine::input::Input' when no variable is declared
-     1>c:\users\agntf\documents\visual studio 2015\projects\engine\enginecore\source\input\input.h(15): warning C4091: 'static ': ignored on left of 'engine::input::Input' when no variable is declared
      1>c:\users\agntf\documents\visual studio 2015\projects\engine\enginecore\source\components\actorfactory.h(25): warning C4091: 'static ': ignored on left of 'engine::component::ActorFactory' when no variable is declared
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\bin\Debug\EngineCore.exe" /INCREMENTAL /NOLOGO LibVorbis.lib LibOgg.lib OpenAL32.lib freeimage.lib glfw3.lib opengl32.lib glew32s.lib kernel32.lib user32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\bin\Debug\EngineCore.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\bin\Debug\EngineCore.lib" /MACHINE:X86 "C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\bin\Debug\Intermediate\cinput.obj"
@@ -105,4 +103,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:08.94
+Time Elapsed 00:00:04.74

@@ -40,13 +40,12 @@ namespace engine {	namespace component {
 	}
 
 	void CSprite::Start() {
-		m_sprite->SetPosition(m_parent->GetTransform()->GetPosition());
-		m_sprite->SetSize(m_parent->GetTransform()->GetScale());
+		Update(0);
 	}
 
 	void CSprite::Update(float deltaTime) {
-		m_sprite->SetPosition(m_parent->GetTransform()->GetPosition());
-		m_sprite->SetSize(m_parent->GetTransform()->GetScale());
+		//m_sprite->SetPosition(m_parent->GetTransform()->GetPosition());
+		//m_sprite->SetSize(m_parent->GetTransform()->GetScale());
 	}
 	
 }	}

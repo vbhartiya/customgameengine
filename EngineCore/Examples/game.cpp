@@ -66,6 +66,7 @@ public:
 
 		m_mainScene->Add(ActorFactory::CreateActorFromXML(doc.FirstChildElement()->FirstChildElement(), m_layer));
 		m_mainScene->Add(ActorFactory::CreateActorFromXML(doc.FirstChildElement()->FirstChildElement()->NextSiblingElement(), m_layer));
+		m_mainScene->Add(ActorFactory::CreateActorFromXML(doc.FirstChildElement()->FirstChildElement()->NextSiblingElement()->NextSiblingElement(), m_layer));
 	}
 
 	void Render() override {
