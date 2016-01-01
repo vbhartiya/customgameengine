@@ -138,6 +138,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Examples\cinput.cpp" />
     <ClCompile Include="Examples\game.cpp" />
     <ClCompile Include="Examples\tilelayer.cpp" />
     <ClCompile Include="Ext\FreeType-GL\platform.c" />
@@ -223,6 +224,7 @@
     <ClCompile Include="Source\Physics\rigidbody.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Examples\cinput.h" />
     <ClInclude Include="Examples\tilelayer.h" />
     <ClInclude Include="Ext\FreeType-GL\freetype-gl.h" />
     <ClInclude Include="Ext\FreeType-GL\opengl.h" />
@@ -273,6 +275,7 @@
     <ClInclude Include="Source\Graphics\texture.h" />
     <ClInclude Include="Source\Graphics\texturemanager.h" />
     <ClInclude Include="Source\Graphics\window.h" />
+    <ClInclude Include="Source\Input\input.h" />
     <ClInclude Include="Source\Maths\mat4.h" />
     <ClInclude Include="Source\Maths\Maths.h" />
     <ClInclude Include="Source\Maths\Vec2.h" />

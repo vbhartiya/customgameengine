@@ -1,4 +1,5 @@
 #include "../Source/engine.h"
+#include "cinput.h"
 
 using namespace engine;
 using namespace graphics;

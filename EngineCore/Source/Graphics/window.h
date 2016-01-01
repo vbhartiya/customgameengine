@@ -13,10 +13,18 @@
 #define MAX_KEYS	 1024
 #define MAX_BUTTONS  32
 
-namespace engine {	namespace graphics {
+namespace engine {	
+	
+	namespace input {
+		static class Input;
+	}
+
+	namespace graphics {
 
 	class Window {
+		friend class input::Input;
 	private:
+		static Window* m_instance;
 		const char* m_name;
 		int m_width, m_height;
 		bool m_closed;
@@ -31,22 +39,24 @@ namespace engine {	namespace graphics {
 		
 		double m_mouse_x, m_mouse_y;
 	public:
-		Window(const char* name, int width, int height);
+		static Window* GetWindow();
+		static Window* GetWindow(const char* name, int width, int height);
 		~Window();
 		bool Closed() const;
 		void Update();
 		void Clear() const;
+
+		inline int GetWidth() const { return m_width; }
+		inline int GetHeight() const { return m_height; }
+	private:
+		Window(const char* name, int width, int height);
+		bool Init();
 
 		bool IsKeyPressed(unsigned int keycode) const;
 		bool IsKeyTyped(unsigned int keycode) const;
 		bool IsMouseButtonPressed(unsigned int button) const;
 		bool IsMouseButtonClicked(unsigned int button) const;
 		maths::Vec2 GetMousePos() const;
-
-		inline int GetWidth() const { return m_width; }
-		inline int GetHeight() const { return m_height; }
-	private:
-		bool Init();
 
 		friend void Window_Resize(GLFWwindow *window, int width, int height);
 		friend void Key_Callback(GLFWwindow* window, int key, int scancode, int action, int mods);

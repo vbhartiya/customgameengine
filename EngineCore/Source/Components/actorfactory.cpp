@@ -4,7 +4,7 @@
 
 namespace engine {	namespace component {
 
-	ComponentMap ActorFactory::m_creators;
+	ComponentMap *ActorFactory::m_creators = nullptr;
 
 	Actor* ActorFactory::CreateActorFromXML(tinyxml2::XMLElement* element, graphics::Layer* layer) {
 		Actor* newActor = new Actor(element->Attribute("name"));
@@ -23,8 +23,18 @@ namespace engine {	namespace component {
 		return newActor;
 	}
 
+	void ActorFactory::AddCreator(const std::string& name, ComponentCreator creator) {
+		if (m_creators == nullptr)
+			m_creators = new ComponentMap();
+
+		m_creators->insert(std::pair<std::string, ComponentCreator>(name, creator));
+	}
+
 	void ActorFactory::AddComponentFromXML(Actor* actor, tinyxml2::XMLElement* element) {
-		actor->AddComponent(m_creators[element->Value()](element));
+		auto it = m_creators->find(element->Value());
+		if (it != m_creators->end()) {
+			actor->AddComponent(it->second(element));
+		}
 	}
 
 }	}

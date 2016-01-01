@@ -9,6 +9,8 @@
 
 #include "Graphics/Layers/layer.h"
 
+#include "Input/input.h"
+
 #include "Maths/Maths.h"
 
 #include "Components/scene.h"
@@ -17,7 +19,7 @@
 #include "Components/ctransform.h"
 #include "Components/crigidbody.h"
 #include "Components/ccoliider.h"
-#include "Components\/actorfactory.h"
+#include "Components/actorfactory.h"
 
 namespace engine {
 	class Engine {
@@ -39,7 +41,7 @@ namespace engine {
 		}
 
 		graphics::Window* CreateNewWindow(const char* name, int width, int height) {
-			m_window = new graphics::Window(name, width, height);
+			m_window = graphics::Window::GetWindow(name, width, height);
 			return m_window;
 		}
 

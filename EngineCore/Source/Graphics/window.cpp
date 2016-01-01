@@ -5,6 +5,19 @@ namespace engine {	namespace graphics {
 	void Window_Resize(GLFWwindow*, int, int);
 	void Key_Callback(GLFWwindow*, int , int , int , int);
 
+	Window* Window::m_instance = nullptr;
+
+	Window* Window::GetWindow() {
+		return m_instance;
+	}
+
+	Window* Window::GetWindow(const char* name, int width, int height) {
+		if (m_instance == nullptr)
+			m_instance = new Window(name, width, height);
+
+		return m_instance;
+	}
+
 	Window::Window(const char* name, int width, int height) {
 		m_name = name;
 		m_width = width;

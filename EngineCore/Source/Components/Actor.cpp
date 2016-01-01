@@ -32,10 +32,7 @@ namespace engine { namespace component {
 
 	void Actor::ComponentAdded(CSprite* component) {
 		if (m_actor_group != nullptr) return;
-
-		m_components.push_back(component);
-		m_components.back()->SetParent(this);
-		
+				
 		m_actor_group = new graphics::Group(m_transform->m_rotation_matrix);
 		m_actor_layer->Add(m_actor_group);
 
@@ -45,16 +42,10 @@ namespace engine { namespace component {
 	void Actor::ComponentAdded(CRigidBody* component) {
 		if (m_rigidbody != nullptr) return;
 
-		m_components.push_back(component);
-		m_components.back()->SetParent(this);
-
 		m_rigidbody = component;
 	}
 
 	void Actor::ComponentAdded(CCollider* component) {
-		m_components.push_back(component);
-		m_components.back()->SetParent(this);
-
 		physics::PhysicsManager::Add(component->m_collider, (m_rigidbody == nullptr) ? nullptr : m_rigidbody->m_rigidbody);
 	}
 

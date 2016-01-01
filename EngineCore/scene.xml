@@ -4,6 +4,7 @@
     <Sprite texName="CityBack" texPath="city_back.png"/>
     <RigidBody mass="1" gravityScale="1" />
     <CircleCollider centerX="0.5" centerY="0.5" radius="2"/>
+    <Input />
   </Actor>
 
   <Actor name="Floor">

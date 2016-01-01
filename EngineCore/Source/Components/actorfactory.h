@@ -15,11 +15,11 @@ namespace engine {	namespace component {
 
 	static class ActorFactory {
 	private:
-		static ComponentMap m_creators;
+		static ComponentMap *m_creators;
 	private:
 		static void AddComponentFromXML(Actor* actor, tinyxml2::XMLElement* element);
 	protected:
-		static void AddCreator(std::string name, ComponentCreator creator) { m_creators.insert(std::pair<std::string, ComponentCreator>(name, creator)); }
+		static void AddCreator(const std::string& name, ComponentCreator creator);
 	public:
 		static Actor* CreateActorFromXML(tinyxml2::XMLElement* element, graphics::Layer* layer = nullptr);
 	};
