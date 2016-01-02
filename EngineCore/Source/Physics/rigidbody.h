@@ -39,6 +39,7 @@ namespace engine {	namespace physics {
 
 		inline void SetGravityScale(float gravityScale) { m_gravityScale = gravityScale; }
 		inline void SetRestitution(float restitution) { m_restitution = restitution; }
+		inline void SetVelocity(const maths::Vec3& velocity) { m_velocity = velocity; }
 
 		inline const maths::Vec3& GetVelocity() const { return m_velocity; }
 		inline const float GetMass() const { return m_massData.mass; }

@@ -25,8 +25,9 @@ namespace engine {	namespace physics {
 
 	void PhysicsManager::Update() {
 		for (int i = 0, size = m_colliders.size() - 1; i < size; i++) {
+			Collision col;
 			for (int j = i + 1; j < size + 1; j++) {
-				Collision col = m_colliders[i]->IsColliding(*m_colliders[j]);
+				col = m_colliders[i]->IsColliding(*m_colliders[j]);
 				if (col.normal != maths::Vec3(0, 0, 0)) {
 					if(m_collidables[m_colliders[i]] != nullptr)
 						m_collidables[m_colliders[i]]->ResolveCollision(col, m_collidables[m_colliders[j]]);

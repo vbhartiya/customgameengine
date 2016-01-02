@@ -36,14 +36,16 @@ namespace engine {	namespace physics {
 		m_velocity += m_massData.invMass * impulse;
 
 		float percentFix = 0.2f;
-		maths::Vec3 correction = collision.normal * (collision.depth / (m_massData.invMass + otherMassInv)) * percentFix;
-		m_positionCorrection = correction * m_massData.invMass;
+		float threshold = 0.01f;
+		maths::Vec3 correction = collision.normal * (maths::Max(collision.depth - threshold, 0.0f) / (m_massData.invMass + otherMassInv)) * percentFix;
+		m_positionCorrection += correction * m_massData.invMass;
+
 	}
 
 	void RigidBody::Update(float deltaTime) {		
 		m_forceSum += m_gravity * m_gravityScale * m_massData.mass;
 		m_acceleration = m_forceSum * m_massData.invMass;
-		m_velocity += m_acceleration * deltaTime + m_positionCorrection * (1/deltaTime);
+		m_velocity += m_acceleration * deltaTime + m_positionCorrection * (1 / deltaTime);
 
 		m_positionCorrection -= m_positionCorrection;
 		m_forceSum -= m_forceSum;

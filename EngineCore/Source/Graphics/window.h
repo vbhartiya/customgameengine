@@ -46,6 +46,8 @@ namespace engine {
 		void Update();
 		void Clear() const;
 
+		inline void SetBackgroundColor(const maths::Vec4& color) { glClearColor(color.x, color.y, color.z, color.w); }
+
 		inline int GetWidth() const { return m_width; }
 		inline int GetHeight() const { return m_height; }
 	private:

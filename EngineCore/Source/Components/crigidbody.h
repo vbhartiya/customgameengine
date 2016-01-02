@@ -21,6 +21,8 @@ namespace engine {	namespace component {
 		void Update(float deltaTime) override;
 		
 		inline void PostAdd() override { m_parent->ComponentAdded(this); }
+		
+		inline void SetVelocity(const maths::Vec3& velocity) { m_rigidbody->SetVelocity(velocity); }
 		inline const maths::Vec3& GetVelocity() const { return m_rigidbody->GetVelocity(); }
 
 		inline void SetGravityScale(float gravityScale) { m_rigidbody->SetGravityScale(gravityScale); }

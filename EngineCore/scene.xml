@@ -1,14 +1,14 @@
 <Scene name="Main Scene">
   <Actor name="City Back">
     <Transform pX ="-16" pY="-9" sX="32" sY="18" />
-    <Sprite texName="cityBack" texPath="city_back.png" color="FF9999FF"/>
+    <Sprite texName="cityBack" texPath="City_Back.psd" color="FF9999FF"/>
   </Actor>
   
   <Actor name="Main Actor">
     <Transform pY="5"/>
     <Sprite color="FF6666FF"/>
     <RigidBody mass="1" gravityScale="1" />
-    <CircleCollider centerX="0.5" centerY="0.5" radius="2"/>
+    <AxisAlignedBoundingBox centerX="0.5" centerY="0.5" sizeX="1" sizeY="1" />
     <Input />
   </Actor>
 
@@ -17,4 +17,23 @@
     <Sprite color="FF3333FF"/>
     <AxisAlignedBoundingBox centerX="0.5" centerY="0.5" sizeX="1" sizeY="1" />
   </Actor>
- </Scene>
+
+  <Actor name="Left Wall">
+    <Transform pX="-16" pY="-8" sX="0.5" sY="16.5"/>
+    <Sprite color="FF3333FF" />
+    <AxisAlignedBoundingBox centerX="0.5" centerY="0.5" sizeX="1" sizeY="1" />
+  </Actor>
+
+  <Actor name="Right Wall">
+    <Transform pX="15.5" pY="-8" sX="0.5" sY="16.5"/>
+    <Sprite color="FF3333FF" />
+    <AxisAlignedBoundingBox centerX="0.5" centerY="0.5" sizeX="1" sizeY="1" />
+  </Actor>
+
+  <Actor name="Roof">
+    <Transform pX="-16" pY="8.5" sX="32" sY="0.5"/>
+    <Sprite color="FF3333FF"/>
+    <AxisAlignedBoundingBox centerX="0.5" centerY="0.5" sizeX="1" sizeY="1" />
+  </Actor>
+
+</Scene>

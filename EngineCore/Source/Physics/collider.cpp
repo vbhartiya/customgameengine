@@ -81,7 +81,11 @@ namespace engine {	namespace physics {
 			float y_overlap = a_half_height + b_half_height - abs(normal.y);
 
 			if (y_overlap > 0) {
-				if (x_overlap > y_overlap && x_overlap < a_half_width*2 && x_overlap < b_half_width*2) {
+
+				if (x_overlap >= maths::Min(a_half_width, b_half_width)) x_overlap = 0;
+				if (y_overlap >= maths::Min(a_half_height, b_half_height)) y_overlap = 0;
+
+				if (x_overlap > y_overlap) {
 					if (normal.x < 0)
 						col.normal = maths::Vec3(-1, 0, 0);
 					else

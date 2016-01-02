@@ -7,6 +7,11 @@ namespace engine {	namespace physics {
 	struct Collision {
 		maths::Vec3 normal;
 		float depth;
+
+		void operator+=(const Collision& other) {
+			normal += other.normal;
+			depth += other.depth;
+		}
 	};
 
 	class Collider {
