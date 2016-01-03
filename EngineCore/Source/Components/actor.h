@@ -12,6 +12,7 @@ namespace engine {	namespace component {
 	class CRigidBody;
 	class CCollider;
 	class CSprite;
+	class CText;
 
 	class Actor {
 		friend class CTransform;
@@ -35,6 +36,7 @@ namespace engine {	namespace component {
 		void ComponentAdded(CRigidBody* component);
 		void ComponentAdded(CCollider* component);
 		void ComponentAdded(CSprite* component);
+		void ComponentAdded(CText* component);
 
 		inline void SetLayer(graphics::Layer* layer) { m_actor_layer = layer; }
 

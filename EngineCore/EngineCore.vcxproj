@@ -197,6 +197,7 @@
     <ClCompile Include="Source\Components\actorfactory.cpp" />
     <ClCompile Include="Source\Components\ccollider.cpp" />
     <ClCompile Include="Source\Components\csprite.cpp" />
+    <ClCompile Include="Source\Components\ctext.cpp" />
     <ClCompile Include="Source\Components\ctransform.cpp" />
     <ClCompile Include="Source\Components\crigidbody.cpp" />
     <ClCompile Include="Source\Components\scene.cpp" />
@@ -256,6 +257,7 @@
     <ClInclude Include="Source\Components\componentregistery.h" />
     <ClInclude Include="Source\Components\crigidbody.h" />
     <ClInclude Include="Source\Components\csprite.h" />
+    <ClInclude Include="Source\Components\ctext.h" />
     <ClInclude Include="Source\Components\ctransform.h" />
     <ClInclude Include="Source\Components\scene.h" />
     <ClInclude Include="Source\engine.h" />

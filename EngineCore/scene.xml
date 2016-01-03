@@ -35,5 +35,10 @@
     <Sprite color="FF3333FF"/>
     <AxisAlignedBoundingBox centerX="0.5" centerY="0.5" sizeX="1" sizeY="1" />
   </Actor>
+  
+  <Actor name="Title">
+    <Transform pX ="1" pY="7"/>
+    <Label fontName="arial" fontPath="arial.ttf" fontSize="50" color="FF0000FF" text="R.G.B."/>
+  </Actor>
 
 </Scene>

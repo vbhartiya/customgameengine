@@ -354,6 +354,9 @@
     <ClCompile Include="Examples\cinput.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Components\ctext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Ext\FreeType\include\freetype\config\ftheader.h">
@@ -546,6 +549,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Examples\cinput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Components\ctext.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

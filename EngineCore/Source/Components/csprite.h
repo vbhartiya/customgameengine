@@ -21,10 +21,7 @@ namespace engine {	namespace component {
 		CSprite(maths::Vec4 color);
 		CSprite(unsigned int color);
 		CSprite(graphics::Texture* texture);
-
-		void Start() override;
-		void Update(float deltaTime) override;
-
+		
 		inline void PostAdd() override { m_parent->ComponentAdded(this); }
 		inline void SetSpriteColor(unsigned int color) { m_sprite->SetColor(color); }
 

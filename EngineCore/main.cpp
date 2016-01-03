@@ -33,7 +33,7 @@
 #include "Ext/TinyXML/tinyxml2.h"
 #include <map>
 
-#if 0
+#if 1
 int main() {
 
 	using namespace engine;
@@ -41,11 +41,11 @@ int main() {
 	using namespace audio;
 	using namespace maths;
 
-	Window window("Engine", 800, 450);
+	Window* window = Window::GetWindow("Engine", 800, 450);
 
 	glClearColor(0.2f, 0.3f, 0.9f, 1.0f);
 
-	Texture *tex[] = { new Texture("test.jpg"), new Texture("test2.jpg") };
+	//Texture *tex[] = { new Texture("test.jpg"), new Texture("test2.jpg") };
 
 	//int texIDs[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
@@ -61,14 +61,14 @@ int main() {
 
 	for (float y = -9.0f; y < 9.0f; y+=increment) {
 		for (float x = -16.0f; x < 16.0f; x+= increment*16.0f/12.0f) {
-			layer.Add(new Sprite(x, y, increment*16.0f / 12.0f, increment, tex[rand()%2]));
+			//layer.Add(new Sprite(x, y, increment*16.0f / 12.0f, increment, tex[rand()%2]));
 		}
 	}
 
 	FontManager::Add(new Font("arial", "arial.ttf", 32));
 
 	Group* fpsGroup = new Group(Mat4::Translation(Vec3(-15.8f, 7.5f, 0.0f)));
-	Label* fps = new Label("FPS", 0.2f, 0.2f, Vec4(1, 1, 0, 1.0f), "arial", 32);
+	Label* fps = new Label("FPS", 0.2f, 0.2f, 0xFFFFFFFF, "arial", 32);
 
 	fpsGroup->Add(new Sprite(0, 0, 6, 1.3f, Vec4(0.1f, 0.1f, 0.1f, 0.8f)));
 	fpsGroup->Add(fps);
@@ -84,40 +84,27 @@ int main() {
 	float time = 0.0f;
 	unsigned int frames = 0;
 
-	while (!window.Closed()) {
-		window.Clear();
-
-		Vec2 mousePos = window.GetMousePos();
-		mousePos.x = (mousePos.x / window.GetWidth()) * 32.0f - 16.0f;
-		mousePos.y = ((mousePos.y / window.GetHeight()) - 1.0f) * -18.0f - 9.0f;
-
-		shader->Enable();
-		shader->SetUniform2f("light_pos", mousePos);
-
-		if (window.IsKeyTyped(GLFW_KEY_S))
-			AudioManager::Get("Triumph")->Stop();
-
-		if (window.IsKeyTyped(GLFW_KEY_P))
-			AudioManager::Get("Triumph")->Resume();
-
+	while (!window->Closed()) {
+		window->Clear();
+		
 		layer.Render();
 
 		shader->Disable();
 
-		window.Update();
+		window->Update();
 
 		frames++;
 
 		if (timer.Elapsed() - time > 1.0f) {
 			time = timer.Elapsed();
 			//printf("%d fps\n", frames);
-			fps->SetText(std::to_string(frames) + " FPS");
+			//fps->SetText(std::to_string(frames) + " FPS");
 			frames = 0;
 		}		
 	}
 
 	for (int i = 0; i < 2; i++) {
-		delete tex[i];
+//		delete tex[i];
 	}
 
 	return 0;

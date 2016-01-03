@@ -38,14 +38,5 @@ namespace engine {	namespace component {
 	{
 		m_sprite = new graphics::Sprite(0, 0, 1, 1, texture);
 	}
-
-	void CSprite::Start() {
-		Update(0);
-	}
-
-	void CSprite::Update(float deltaTime) {
-		//m_sprite->SetPosition(m_parent->GetTransform()->GetPosition());
-		//m_sprite->SetSize(m_parent->GetTransform()->GetScale());
-	}
 	
 }	}

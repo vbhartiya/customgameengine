@@ -28,7 +28,7 @@ public:
 		m_layer = new Layer(new engine::graphics::BatchRenderer2D(), 
 							new Shader("Source/Shaders/basic.vert", "Source/Shaders/basic.frag"), 
 							Mat4::Orthographic(-16.0f, 16.0f, -9.0f, 9.0f, -1.0f, 1.0f));
-		m_layer->SetScale(Vec2(m_window->GetWidth() / 32.0f, m_window->GetHeight() / 18.0f));
+		m_layer->SetScale(Vec2(32.0f/m_window->GetWidth(), 18.0f/ m_window->GetHeight()));
 
 		m_mainScene = new Scene("Main", "scene.xml", m_layer);
 
@@ -44,10 +44,10 @@ public:
 		m_mainScene->Update(deltaTime);
 	}
 }; 
-
+/*
 int main() {
 	Game game;
 	game.Start();
 
 	return 0;
-}
+}*/
