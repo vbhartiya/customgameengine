@@ -37,8 +37,8 @@
   </Actor>
   
   <Actor name="Title">
-    <Transform pX ="1" pY="7"/>
-    <Label fontName="arial" fontPath="arial.ttf" fontSize="50" color="FF0000FF" text="R.G.B."/>
+    <Transform pX ="-15" pY="7"/>
+    <Label fontName="arial" fontPath="arial.ttf" fontSize="50" fontColor="FF000000" text="R.G.B."/>
   </Actor>
 
 </Scene>

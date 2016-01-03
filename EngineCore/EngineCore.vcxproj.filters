@@ -100,6 +100,15 @@
     <Filter Include="Header Files\Components">
       <UniqueIdentifier>{ed69e8f8-7a57-4e51-8336-72ae88c564ce}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Ext\TinyXML">
+      <UniqueIdentifier>{0af1421c-4038-45cf-a0bb-a3bf04dce8a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Input">
+      <UniqueIdentifier>{70a61966-39f9-4022-823e-63cb9a6a9346}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Ext\TinyXML">
+      <UniqueIdentifier>{eedd9305-10bd-45bb-860d-c002c919c02d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -333,29 +342,29 @@
     <ClCompile Include="Source\Components\ctransform.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Physics\physicsmanager.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Source\Components\actorfactory.cpp">
+      <Filter>Source Files\Components</Filter>
     </ClCompile>
     <ClCompile Include="Source\Components\ccollider.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Components\scene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Ext\TinyXML\tinyxml2.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Components\actorfactory.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Graphics\texturemanager.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Components</Filter>
     </ClCompile>
     <ClCompile Include="Examples\cinput.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Components</Filter>
     </ClCompile>
     <ClCompile Include="Source\Components\ctext.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Components\scene.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Graphics\texturemanager.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Physics\physicsmanager.cpp">
+      <Filter>Source Files\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Ext\TinyXML\tinyxml2.cpp">
+      <Filter>Source Files\Ext\TinyXML</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -524,35 +533,35 @@
     <ClInclude Include="Source\Components\ctransform.h">
       <Filter>Header Files\Components</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Physics\physicsmanager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Source\Components\actorfactory.h">
+      <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="Source\Components\ccoliider.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Components\scene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Ext\TinyXML\tinyxml2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Components\actorfactory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Graphics\texturemanager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Components\componentregistery.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Input\input.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="Examples\cinput.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Components\componentregistery.h">
+      <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="Source\Components\ctext.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Ext\TinyXML\tinyxml2.h">
+      <Filter>Header Files\Ext\TinyXML</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Input\input.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Graphics\texturemanager.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Components\scene.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Physics\physicsmanager.h">
+      <Filter>Header Files\Physics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -582,5 +591,8 @@
     <Image Include="test.jpg">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="scene.xml" />
   </ItemGroup>
 </Project>

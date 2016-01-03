@@ -33,7 +33,7 @@
 #include "Ext/TinyXML/tinyxml2.h"
 #include <map>
 
-#if 1
+#if 0
 int main() {
 
 	using namespace engine;
@@ -57,6 +57,8 @@ int main() {
 	//Group *transformation = new Group(Mat4::Translation(Vec3(5, 3, 0)) * Mat4::Rotation(45, Vec3(0, 0, 1)));
 	//layer.Add(transformation);
 
+	layer.SetScale(Vec2(32.0f / 800, 18.0f / 450));
+
 	float increment = 2.0f;
 
 	for (float y = -9.0f; y < 9.0f; y+=increment) {
@@ -65,15 +67,16 @@ int main() {
 		}
 	}
 
-	FontManager::Add(new Font("arial", "arial.ttf", 32));
+	FontManager::Add(new Font("arial", "arial.ttf", 200));
 
-	Group* fpsGroup = new Group(Mat4::Translation(Vec3(-15.8f, 7.5f, 0.0f)));
-	Label* fps = new Label("FPS", 0.2f, 0.2f, 0xFFFFFFFF, "arial", 32);
+	Group* fpsGroup = new Group(Mat4::Translation(Vec3(-0.0f, 0.0f, 0.0f)));
+	Label* fps = new Label("A", 0.2f, 0.2f, 0xFFFFFFFF, "arial", 200);
 
 	fpsGroup->Add(new Sprite(0, 0, 6, 1.3f, Vec4(0.1f, 0.1f, 0.1f, 0.8f)));
 	fpsGroup->Add(fps);
 
 	layer.Add(fpsGroup);
+
 
 	std::cout << "Drawing " << 18.0f / increment * 32.0f / (increment * 16.0f / 12.0f) << " Sprites" << std::endl;
 

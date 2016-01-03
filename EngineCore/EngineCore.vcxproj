@@ -309,6 +309,9 @@
   <ItemGroup>
     <Media Include="Examples\Triumph.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <Xml Include="scene.xml" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

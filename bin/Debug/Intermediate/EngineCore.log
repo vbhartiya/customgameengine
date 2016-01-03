@@ -1,9 +1,9 @@
-﻿Build started 3/01/2016 11:43:39 AM.
-     1>Project "C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\EngineCore\EngineCore.vcxproj" on node 2 (Build target(s)).
+﻿Build started 3/01/2016 11:59:55 PM.
+     1>Project "C:\Users\Vishesh\documents\visual studio 2015\Projects\Engine\EngineCore\EngineCore.vcxproj" on node 2 (Build target(s)).
      1>Link:
-         EngineCore.vcxproj -> C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\bin\Debug\EngineCore.exe
-     1>Done Building Project "C:\Users\agntf\Documents\Visual Studio 2015\Projects\Engine\EngineCore\EngineCore.vcxproj" (Build target(s)).
+         EngineCore.vcxproj -> C:\Users\Vishesh\documents\visual studio 2015\Projects\Engine\bin\Debug\EngineCore.exe
+     1>Done Building Project "C:\Users\Vishesh\documents\visual studio 2015\Projects\Engine\EngineCore\EngineCore.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.20
+Time Elapsed 00:00:00.22

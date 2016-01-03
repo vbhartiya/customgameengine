@@ -81,7 +81,7 @@ namespace engine {	namespace graphics {
 			}
 
 			m_textureSlots.push_back(font.GetID());
-			ts = (float)m_textureSlots.size() - 1;
+			ts = (float)m_textureSlots.size();
 		}
 
 		float x = position.x;

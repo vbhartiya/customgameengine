@@ -44,10 +44,10 @@ public:
 		m_mainScene->Update(deltaTime);
 	}
 }; 
-/*
+
 int main() {
 	Game game;
 	game.Start();
 
 	return 0;
-}*/
+}
